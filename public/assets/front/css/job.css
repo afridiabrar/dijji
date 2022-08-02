@@ -1,0 +1,143 @@
+section.shop_sec.job_section a.btn {
+    border-radius: 0;
+    background: #0cecbf;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+section.shop_sec.job_section a.btn:hover{
+    background: #fff;
+    color: #0cecbf;
+    border: 1px solid;
+}
+.job_content {
+    /* display: flex; */
+    align-items: center;
+}
+.job_content:hover {
+    box-shadow: rgb(100 100 111 / 20%) 0px 0px 20px 5px;
+}
+p.job_b_para {
+    font-size: 10px;
+    color: #000;
+    font-family: "Gotham Rounded", sans-serif;
+}
+p.job_g_para {
+    color: #676767;
+    font-size: 12px;
+}
+.job_content i {
+    font-size: 14px;
+    color: #0cecbf;
+}
+.job_content p {
+    margin: 0;
+    font-family: "Gotham Rounded", sans-serif;
+}
+p.job_para {
+    font-family: "Gotham Rounded", sans-serif;
+    font-size: 14px;
+}
+.job_content {
+    padding: 2rem 1rem;
+    box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 10%);
+    border-radius: 3px;
+}
+.d_green_para {
+    color: #203003;
+    font-size: 15px;
+    font-weight: 500;
+}
+select#exampleFormControlSelect1 {
+    height: 52px;
+    font-family: 'gtw';
+    padding: 1rem 1rem;
+    border: unset;
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1);
+    appearance: none;
+    background: url(../img/chevron_right_1.png) no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+    background-color: #fff;
+}
+button.close {
+    color: #fff;
+    background: #0cecbf;
+    padding: 2px 5px;
+    font-size: 22px;
+    font-weight: 100;
+}
+.modal-header {
+    border-bottom: 0;
+}
+div#exampleModalCenter .modal-body {
+    padding: 10px 2rem;
+}
+div#exampleModalCenter .modal-body .form-control {
+    line-height: 2.25;
+    padding-left: 1.5rem;
+}
+p.aftj {
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid #BCBCBC;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    color: #000;
+    font-size: 22px;
+    font-family: "Gotham Rounded", sans-serif;
+}
+.avatar-edit label {
+    position: relative;
+    /* right: 3rem; */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background: black;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 15px;
+    padding: 20px 20px;
+    line-height: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin: 13px 0;
+    font-size: 11px;
+}
+.avatar-edit input {
+    display: none;
+}
+.filter_dv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 60px 0;
+}
+.filter_dv p {
+    margin: 0;
+}
+.filter_dv .filters_btn {
+    display: flex;
+    align-items: center;
+}
+.filter_dv .filters_btn .form-group {
+    margin: 0 0 0 10px;
+}
+.filter_dv .filters_btn .form-group .form-control {
+    background: #fff9f6;
+    border-radius: 0;
+    border: 0;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #300c44;
+    font-weight: 400;
+}

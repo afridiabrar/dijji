@@ -1,0 +1,68 @@
+/* Contact Css Start Here */
+.contact_sec {
+  padding: 140px 0;
+}
+.contact_sec .heading_wrapper {
+  padding-bottom: 60px;
+}
+.contact_sec .heading_wrapper h2 {
+  color: #000;
+  padding-bottom: 10px;
+}
+.contact_sec .heading_wrapper p {
+  font-family: "gotham-book";
+  font-weight: 600;
+}
+.contact_sec .form-group .form-control {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #aeb7c1;
+  box-shadow: none;
+  outline: none;
+  font-family: "gotham-book";
+  font-size: 14px;
+  padding: 15px 15px;
+}
+.contact_sec .form-group {
+  margin-bottom: 30px;
+}
+.contact_sec .form-group textarea {
+  height: 110px;
+}
+.contact_sec .check_boxes .form-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.contact_sec .check_boxes .form-group input {
+  width: unset;
+  margin-top: 5px;
+  margin-right: 18px;
+}
+.contact_sec .check_boxes .form-group label {
+  color: #0000008c;
+  font-size: 14px;
+  font-family: "gotham-book";
+}
+.contact_sec .action_group {
+  text-align: end;
+}
+.contact_sec .action_group .recaptcha {
+  /* margin-right: -20px; */
+  margin-bottom: 30px;
+  text-align: -webkit-right;
+}
+.contact_sec .action_group .button-group button.btn {
+  color: #fff !important;
+  font-family: "gotham-book";
+  transition: 0.6s;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  border: 2px solid #fff;
+  background: #300c44;
+  border-radius: 10px !important;
+  cursor: pointer;
+  padding: 13px 50px;
+}
+/* Contact Css End Here */

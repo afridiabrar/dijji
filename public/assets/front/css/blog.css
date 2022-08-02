@@ -1,0 +1,76 @@
+/* Blog Css Start Here */
+.blogs_sec {
+  padding: 100px 0;
+}
+.blog_box {
+  border: 1px solid #70707026;
+  box-shadow: 0px 0px 6px #ddd;
+  margin-bottom: 60px;
+}
+.blog_box .img_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blog_box .img_box .hover_box {
+  background: #0cecbf57;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-radius: 5px;
+  transform: rotate(360deg);
+  transition: 0.8s;
+}
+.blog_box:hover .img_box .hover_box {
+  width: 90%;
+  height: 90%;
+}
+.blog_box .img_box img {
+  border-radius: 5px;
+  height: 270px;
+  width: 100%;
+  object-fit: cover;
+}
+.blog_box .content_box {
+  padding: 30px 25px 40px;
+  background: #fff;
+}
+.blog_box .content_box h4 {
+  margin-bottom: 15px;
+  color: #0cecbf;
+}
+.blog_box .content_box p {
+  color: #00000085;
+  font-family: "gotham-book";
+  font-size: 13px;
+  line-height: 23px;
+}
+.blog_box .content_box a.lnk {
+  font-size: 20px;
+  color: #300c44;
+  font-family: "gotham-book";
+  text-decoration: none;
+}
+ul.pagination {
+  justify-content: center;
+}
+ul.pagination li a {
+  background: #ffffff;
+  box-shadow: 0px 0px 5px #ccc;
+  width: 45px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 7px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000000c7;
+}
+ul.pagination li a.active {
+  background: #0cecbf;
+  color: #fff;
+}
+/* Blog Css Start Here */

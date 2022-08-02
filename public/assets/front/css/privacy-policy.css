@@ -1,0 +1,101 @@
+/* Privacy Css Start Here */
+header#header-top {
+  position: unset;
+}
+header#header-top.active {
+  background-color: #fff;
+}
+.privacy_policy {
+  padding: 60px 0;
+}
+.privacy_policy .content_wrapper .heading {
+  padding-bottom: 20px;
+}
+.privacy_policy .content_wrapper .heading h4 {
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Gotham Rounded";
+}
+/* .privacy_policy .content_wrapper .title h5 {
+  font-weight: 700;
+  font-size: 15px;
+} */
+.privacy_policy .content_wrapper h5 {
+  font-family: "Gotham Rounded";
+  font-size: 16px;
+}
+.privacy_policy .content_wrapper p {
+  font-size: 16px;
+  color: #000;
+  font-family: "gotham rounded";
+}
+.privacy_policy .content_wrapper p.italic {
+  font-style: italic;
+}
+.privacy_policy .content_wrapper ul {
+  margin: 30px 0;
+}
+.privacy_policy .content_wrapper ul li {
+  font-size: 16px;
+  margin: 8px 0;
+  font-family: "Gotham Rounded";
+}
+.privacy_policy .content_wrapper tr td {
+  border: 1px solid #ddd;
+  padding: 20px 13px;
+  vertical-align: baseline;
+}
+.privacy_policy .content_wrapper tr td span {
+  font-size: 16px;
+  color: #000;
+  display: block;
+  margin: 16px 0;
+  font-family: "gotham-book";
+}
+.privacy_policy .content_wrapper tr .one {
+  width: 25%;
+}
+.privacy_policy .content_wrapper tr .two {
+  width: 25%;
+}
+.privacy_policy .content_wrapper tr .three {
+  width: 25%;
+}
+.privacy_policy .content_wrapper tr .four {
+  width: 25%;
+}
+.privacy_policy .content_wrapper tr th {
+  text-align: left;
+  padding: 10px 0 10px 30px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+.privacy_policy .content_wrapper td p {
+  font-family: "gotham-book";
+}
+.privacy_policy .content_wrapper table {
+  margin-top: 60px;
+}
+@media (max-width: 575px) {
+  .privacy_policy {
+    padding-top: 60px;
+  }
+  .privacy_policy .heading_wrapper h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .privacy_policy .content_wrapper tr .one {
+    min-width: 360px;
+  }
+  .privacy_policy .content_wrapper tr .two {
+    min-width: 250px;
+  }
+  .privacy_policy .content_wrapper tr .three {
+    min-width: 250px;
+  }
+  .privacy_policy .content_wrapper tr .four {
+    min-width: 500px;
+  }
+}
+/* Privacy Css End Here */

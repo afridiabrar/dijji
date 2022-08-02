@@ -1,0 +1,47 @@
+/* Portal Login Css Start Here */
+.portal-login {
+  padding: 60px 0;
+}
+.portal-login .portal_box {
+  padding: 60px 40px;
+  box-shadow: 0px 0px 10px #ddd;
+}
+.portal-login .portal_box .login_box {
+  padding-top: 20px;
+}
+.portal-login .portal_box ul.nav-pills li {
+  flex: 2;
+}
+.portal-login .portal_box ul.nav-pills li a.nav-link.active {
+  background: #0cecbf;
+  color: #fff;
+  border-radius: 0;
+  text-align: center;
+  padding: 12px 10px;
+}
+.portal-login .portal_box ul.nav-pills li a.nav-link {
+  color: #000;
+  border-radius: 0;
+  text-align: center;
+  padding: 12px 10px;
+}
+.portal-login .portal_box .head h2 {
+  font-size: 25px;
+  text-align: center;
+}
+.portal-login .portal_box .form-control {
+  border-radius: 0;
+  height: 50px;
+  border: 1px solid #0000002e;
+  font-family: "gotham-book";
+}
+.portal-login .portal_box .button-group .btn {
+  width: 100%;
+  border-radius: 0;
+  font-family: "Gotham Rounded";
+  padding: 15px 20px;
+  background: #0cecbf;
+  color: #fff;
+  cursor: pointer;
+}
+/* Portal Login Css End Here */

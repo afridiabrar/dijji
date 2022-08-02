@@ -1,0 +1,125 @@
+/* Login Css Start Here */
+footer {
+  display: none;
+}
+header {
+  display: none;
+}
+.register_sec {
+  overflow: hidden;
+}
+.register_sec .video_box {
+  /* height: 100vh; */
+  width: 100%;
+}
+.register_sec .video_box video {
+  object-fit: cover;
+  width: 100%;
+}
+.register_sec .content_wrapper {
+  padding: 0 60px 0 100px;
+}
+.register_sec .content_wrapper .heading_wrapper h2 {
+  color: #300c44;
+  padding-bottom: 25px;
+}
+.register_sec .content_wrapper .heading_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.register_sec .content_wrapper .heading_wrapper i.fa.fa-times {
+  line-height: 3;
+  color: #000;
+
+}
+.register_sec .content_wrapper .heading_wrapper a {
+  height: fit-content;
+}
+.register_sec .content_wrapper .wrapper h4 {
+  color: #0cecbf;
+  padding-bottom: 20px;
+}
+.register_sec .content_wrapper .wrapper p {
+  color: #300c44;
+  font-family: "gotham-book";
+  display: inline-block;
+}
+.register_sec .content_wrapper .wrapper .dropdown {
+  display: inline-block;
+}
+.register_sec .content_wrapper .wrapper p a {
+  color: #0cecbf;
+  padding-left: 10px;
+}
+.register_sec .content_wrapper .wrapper {
+  margin-bottom: 60px;
+}
+.register_sec .content_wrapper .form-control {
+  border-radius: 0;
+  height: 50px;
+  border: 1px solid #0000002e;
+  font-family: "gotham-book";
+}
+.register_sec .content_wrapper .form-control::placeholder {
+  font-family: "gotham-book";
+  color: #00000054;
+}
+.register_sec .content_wrapper .button-group {
+  margin-top: 30px;
+}
+.register_sec .content_wrapper .button-group button {
+  width: 100%;
+  background: #300c44;
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.register_sec .content_wrapper .rememberDv {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.register_sec .content_wrapper .rememberDv .form-group {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+.register_sec .content_wrapper .rememberDv .lnk {
+  flex: 2;
+  text-align: end;
+}
+.register_sec .content_wrapper .rememberDv .form-group input#remember {
+  width: unset;
+}
+.register_sec .content_wrapper .rememberDv .form-group label {
+  margin: 0 0 0 10px;
+  color: #636060;
+  font-family: "gotham-book";
+  font-size: 15px;
+}
+.register_sec .content_wrapper .rememberDv .lnk a {
+  font-size: 15px;
+  color: #0e3a20;
+  font-family: "gotham-book";
+  text-decoration: none;
+}
+.register_sec .content_wrapper .privacy {
+  padding-top: 30px;
+}
+.register_sec .content_wrapper .privacy p {
+  margin: 0;
+  color: #636060;
+  font-size: 14px;
+  font-family: "gotham-book";
+}
+.register_sec .content_wrapper .privacy p a {
+  font-family: "Gotham Rounded";
+  color: #0cecbf;
+  text-decoration: none;
+}
+section.register_sec select.form-control.testertype {
+  height: 50px;
+}
+
+/* Login Css End Here */
