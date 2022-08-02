@@ -190,9 +190,7 @@
                                 class="layer retailer img-fluid">
                         </figure>
                     </div>
-                    <!-- <div class="img_box wow animate__animated animate__bounceIn animate__delay-1s">
-                                    <figure><img src="img/solution.png" class="img-fluid"></figure>
-                                </div> -->
+
                 </div>
                 <div class="col-md-4">
                     <div class="benefits_box wow animate__animated animate__fadeInDown animate__delay-1s">

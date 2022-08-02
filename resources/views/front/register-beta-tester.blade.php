@@ -15,7 +15,7 @@
             <div class="col-md-6">
                 <div class="content_wrapper">
                     <div class="heading_wrapper">
-                        <h2>Register</h2>
+                        <h1>{{ $cmsPage->pagetitle }}</h1>
                         <a href="{{ url('/') }}"><i class="fa fa-times" aria-hidden="true"></i></a>
                     </div>
                     <div class="wrapper">

@@ -91,7 +91,6 @@
                     <div class="col-md-6">
                         <div class="action_group">
                             <div class="recaptcha">
-                                <!-- <figure><img src="img/recaptcha2.png" class="img-fluid"></figure> -->
                                 <div class="g-recaptcha" data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
                             </div>
                             <div class="button-group">

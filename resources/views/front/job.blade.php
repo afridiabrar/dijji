@@ -16,7 +16,7 @@
             <div class="container">
 
                 <div class="heading_wrapper">
-                    <h1>Careers</h1>
+                    <h1>{{ $cmsPage->pagetitle }}</h1>
                 </div>
 
             </div>
