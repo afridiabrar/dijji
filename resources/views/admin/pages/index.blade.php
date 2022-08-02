@@ -25,17 +25,15 @@
             <!-- Action buttons Code Start -->
             <div class="row">
                 <div class="col-md-12">
-                    {{-- @can('admin.pages.create') --}}
                     <!-- Add New Button Code Moved Here -->
-{{--                    <div class="table-toolbar pull-right">--}}
-{{--                        <div class="btn-group">--}}
-{{--                            <a href="{!! URL::route('admin.pages.create') !!}" id="sample_editable_1_new" class="btn blue">--}}
-{{--                                Add <i class="fa fa-plus"></i>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="table-toolbar pull-right">
+                        <div class="btn-group">
+                            <a href="{!! URL::route('admin.pages.create') !!}" id="sample_editable_1_new" class="btn blue">
+                                Add <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
                     <!-- Add New Button Code Moved Here -->
-                    {{-- @endcan --}}
                 </div>
             </div>
             <!-- Action buttons Code End -->
@@ -73,11 +71,11 @@
                                         <a href="{!! URL::route('admin.pages.edit', $record->id) !!}" class="btn btn-xs green" title="Edit">
                                             <i class="fa fa-edit"></i>
                                         </a>
-{{--                                        <a class="btn btn-xs red" data-toggle="modal" data-target="#confirmDelete"--}}
-{{--                                            data-title="Delete Record" onclick="setRecordId({{ $record->id }})"--}}
-{{--                                            title="Delete Record">--}}
-{{--                                            <i class="fa fa-trash-o"></i>--}}
-{{--                                        </a>--}}
+                                        {{-- <a class="btn btn-xs red" data-toggle="modal" data-target="#confirmDelete" --}}
+                                        {{-- data-title="Delete Record" onclick="setRecordId({{ $record->id }})" --}}
+                                        {{-- title="Delete Record"> --}}
+                                        {{-- <i class="fa fa-trash-o"></i> --}}
+                                        {{-- </a> --}}
                                         <form action="{!! URL::route('admin.pages.destroy', $record->id) !!}" method="POST"
                                             id="deleteForm{!! $record->id !!}">
                                             @csrf

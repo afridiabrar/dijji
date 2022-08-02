@@ -182,7 +182,7 @@
 
                         </ul>
                         <div class="button-group">
-                            <a href="customer.php" class="diji-btn">View More</a>
+                            <a href="{{ url('/customers') }}" class="diji-btn">View More</a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +263,7 @@
 
                         </ul>
                         <div class="button-group">
-                            <a href="retailer.php" class="diji-btn">View More</a>
+                            <a href="{{ url('/register-retailer') }}" class="diji-btn">View More</a>
                         </div>
                     </div>
                 </div>
@@ -306,8 +306,8 @@
                                 </a>
                             </div>
                             <div class="button-group wow animate__animated animate__fadeInUp animate__delay-3s">
-                                <a href="register-beta-tester.php" class="diji-btn">Register As Tester</a>
-                                <a href="register-invester.php" class="diji-btn scnd">Join Us</a>
+                                <a href="{{ url('/register-beta-tester') }}" class="diji-btn">Register As Tester</a>
+                                <a href="{{ url('/register-investor') }}" class="diji-btn scnd">Join Us</a>
                             </div>
                         </div>
                     </div>

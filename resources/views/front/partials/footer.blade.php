@@ -5,7 +5,7 @@
             <div class="col-lg-4 col-md-12">
                 <div class="footer_content">
                     <div class="logoDv">
-                        <a href="index.php">
+                        <a href="{{ url('/') }}">
                             @if (isset($siteSettings->logo) && adminHasAssets($siteSettings->logo))
                                 <figure><img src="{!! asset(uploadsDir() . $siteSettings->logo) !!}" class="img-fluid"></figure>
                             @else
@@ -48,7 +48,7 @@
                         @endif
                         @if ($setting->tiktok)
                             <li><a target="blank" href="{{ $setting->tiktok ? $setting->tiktok : '' }}"><img
-                                        src="img/tik-tok.png" class="img-fluid tiktok"></a></li>
+                                        src="{{ frontimage('tik-tok.png') }}" class="img-fluid tiktok"></a></li>
                         @endif
                     </ul>
                     <p>SEIS and EIS Advance Assurance Status</p>
@@ -63,10 +63,10 @@
                                 <h5>General</h5>
                             </div>
                             <ul class="footer-links">
-                                <li><a href="retailer.php#how_work">How it Works?</a></li>
-                                <li><a href="portal-login-beta.php">Login</a></li>
-                                <li><a href="partner.php#charity">Charity</a></li>
-                                <li><a href="portal-login-investor.php">Investor Portal</a></li>
+                                <li><a href="{{ url('/register-retailer') }}#how_work">How it Works?</a></li>
+                                <li><a href="{{ url('/portal-login-beta') }}">Login</a></li>
+                                <li><a href="{{ url('/partners') }}#charity">Charity</a></li>
+                                <li><a href="{{ url('/portal-login-investor') }}">Investor Portal</a></li>
                             </ul>
                         </div>
                     </div>
@@ -76,10 +76,10 @@
                                 <h5>Quick Links</h5>
                             </div>
                             <ul class="footer-links">
-                                <li><a href="about.php#faqs">FAQs</a></li>
-                                <li><a href="register-invester.php">Join Now</a></li>
-                                <li><a href="retailer.php">For Retailers</a></li>
-                                <li><a href="contact.php">Contact Us</a></li>
+                                <li><a href="{{ url('/about-us') }}#faqs">FAQs</a></li>
+                                <li><a href="{{ url('/register-investor') }}">Join Now</a></li>
+                                <li><a href="{{ url('/register-retailer') }}">For Retailers</a></li>
+                                <li><a href="{{ url('/contact') }}">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,10 +89,10 @@
                                 <h5>About Us</h5>
                             </div>
                             <ul class="footer-links">
-                                <li><a href="about.php">About Us</a></li>
-                                <li><a href="job.php">Careers</a></li>
-                                <li><a href="about.php#mission">Our Mission</a></li>
-                                <li><a href="about.php#newsBlog">Blogs</a></li>
+                                <li><a href="{{ url('/about-us') }}">About Us</a></li>
+                                <li><a href="{{ url('/job') }}">Careers</a></li>
+                                <li><a href="{{ url('/about-us') }}#mission">Our Mission</a></li>
+                                <li><a href="{{ url('/about-us') }}#newsBlog">Blogs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -105,11 +105,11 @@
             </div>
             <div class="right">
                 <ul class="links">
-                    <li><a href="cookies.php">Cookies</a></li>
+                    <li><a href="{{ url('/cookies') }}">Cookies</a></li>
                     <li class="spacer">|</li>
-                    <li><a href="term.php">Term of Use</a></li>
+                    <li><a href="{{ url('/term') }}">Term of Use</a></li>
                     <li class="spacer">|</li>
-                    <li><a href="privacy-policy.php">Privacy Policy</a></li>
+                    <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>

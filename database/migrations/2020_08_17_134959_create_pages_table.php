@@ -21,6 +21,7 @@ class CreatePagesTable extends Migration
             $table->text('content')->nullable();
             $table->text('our_mission')->nullable();
             $table->text('our_vision')->nullable();
+            $table->text('page_name')->nullable();
             $table->string('meta_title')->nullable();
             $table->text('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();

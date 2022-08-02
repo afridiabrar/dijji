@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Models\Page;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -10,22 +11,28 @@ class IndexController extends Controller
     {
         parent::__construct();
     }
-    /**
-     * Index Action
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function image_upload($file)
-    {
-        $extension = $file->getClientOriginalExtension(); // getting file extension
-        $filename  = 'media-file-' . time() . '.' . $extension;
-        $file->move(uploadsDir('/resume'), $filename);
-        return $filename;
-    }
+
+
+
+
+
+
     public function index()
     {
         $cmsPage = Page::where('slug', 'home')->first();
 
         return view('front.index', compact('cmsPage'));
+    }
+
+
+
+    public function page(Request $request, $slug = '')
+    {
+        $cmsPage = Page::where('slug', $slug)->first();
+        if ($cmsPage) {
+
+            return view('front.' . $cmsPage->page_name, compact('cmsPage'));
+        }
+        return '404 Page Not Found ';
     }
 }

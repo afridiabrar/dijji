@@ -5,21 +5,21 @@
             <div class="col-md-7 col-4">
                 <div class="left-content">
                     <div class="logoDv">
-                        <a href="index.php">
+                        <a href="{{ url('/') }}">
                             <figure><img width="180" src="img/logo.gif"></figure>
                         </a>
                     </div>
                     <div class="navbar_menus">
                         <ul class="menus">
-                            <li class="menu-items"><a href="index.php">Home</a></li>
+                            <li class="menu-items"><a href="{{ url('/') }}">Home</a></li>
                             <li class="menu-items"><a href="about.php">About Us</a>
                                 <!-- <ul class="dropdown customdrop">
                                     <li class="customtest"><a href="about.php#testimony">Testimony</a></li>
                                 </ul> -->
                             </li>
-                            <li class="menu-items"><a href="customer.php">Customers</a></li>
-                            <li class="menu-items"><a href="retailer.php">Retailers</a></li>
-                            <li class="menu-items"><a href="partner.php">Partners</a></li>
+                            <li class="menu-items"><a href="{{ url('/customers') }}">Customers</a></li>
+                            <li class="menu-items"><a href="{{ url('/register-retailers') }}">Retailers</a></li>
+                            <li class="menu-items"><a href="{{ url('/partners') }}">Partners</a></li>
                             <li class="menu-items"><a href="contact.php">Contact Us</a></li>
                         </ul>
                     </div>
@@ -59,9 +59,9 @@
                                 Register / Join Us
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="register-invester.php">Register As Investor</a>
+                                <a class="dropdown-item" href="{{ url('/register-investor') }}">Register As Investor</a>
                                 <a class="dropdown-item" href="register-beta-tester.php">Register As Beta-Tester</a>
-                                <a class="dropdown-item" href="register-retailer.php">Register As Retailer</a>
+                                <a class="dropdown-item" href="{{ url('/register-retailer') }}">Register As Retailer</a>
                                 <!-- <a class="dropdown-item" href="login.php">Retailer</a> -->
                             </div>
                         </div>
@@ -93,11 +93,11 @@
         </svg>
     </div>
     <ul class="mobile_menus">
-        <li class="menu_items"><a class="menu_links active_menu" href="index.php">Home</a></li>
+        <li class="menu_items"><a class="menu_links active_menu" href="{{ url('/') }}">Home</a></li>
         <li class="menu_items"><a class="menu_links" href="about.php">About Us</a></li>
-        <li class="menu_items"><a class="menu_links" href="customer.php">Customers</a></li>
-        <li class="menu_items"><a class="menu_links" href="retailer.php">Retailers</a></li>
-        <li class="menu_items"><a class="menu_links" href="partner.php">Partners</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/customers') }}">Customers</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/register-retailers') }}">Retailers</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/partners') }}">Partners</a></li>
         <li class="menu_items"><a class="menu_links" href="contact.php">Contact Us</a></li>
         <li class="menu_items"><a class="menu_links" href="#">Register as tester</a></li>
         <li class="menu_items"><a class="menu_links" href="login.php">Login</a></li>

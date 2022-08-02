@@ -23,7 +23,6 @@ Route::name('front.')->group(
         // Route::get('/',[IndexController::class,'index'])->name('index');
 
         Route::get('/', 'IndexController@index')->name('index');
-        Route::get('/contact', 'IndexController@contact')->name('contact');
         Route::get('/{slug}', 'IndexController@page')->name('page');
         Route::get('/careers', 'IndexController@careers')->name('careers');
         Route::get('career_detail/{id?}/{slug?}', 'IndexController@career_detail')->name('career_detail');

@@ -5,7 +5,7 @@
             <div class="col-md-7 col-4">
                 <div class="left-content">
                     <div class="logoDv">
-                        <a href="index.php">
+                        <a href="{{ url('/') }}">
                             @if ($siteSettings->gif_logo && adminHasAssets($siteSettings->gif_logo))
                                 <figure><img width="180" src="{!! asset(uploadsDir() . $siteSettings->gif_logo) !!}"></figure>
                             @else
@@ -16,11 +16,7 @@
                     <div class="navbar_menus">
                         <ul class="menus">
                             <li class="menu-items"><a href="{{ url('/') }}">Home</a></li>
-                            <li class="menu-items"><a href="{{ url('/about') }}">About Us</a>
-                                <!-- <ul class="dropdown customdrop">
-                                    <li class="customtest"><a href="about.php#testimony">Testimony</a></li>
-                                </ul> -->
-                            </li>
+                            <li class="menu-items"><a href="{{ url('/about-us') }}">About Us</a></li>
                             <li class="menu-items"><a href="{{ url('/customers') }}">Customers</a></li>
                             <li class="menu-items"><a href="{{ url('/retailers') }}">Retailers</a></li>
                             <li class="menu-items"><a href="{{ url('/partners') }}">Partners</a></li>
@@ -44,32 +40,23 @@
                         </div>
                     </div>
                     <div class="button-group">
-                        <!-- <a href="register.php" class="diji-btn">Register As Tester</a> -->
-                        <!-- <a href="login.php" class="diji-btn">Login</a> -->
-                        <!-- <div class="dropdown">
-                            <button class="btn dropdown-toggle diji-btn "  type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Login
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="login.php">Investor</a>
-                                <a class="dropdown-item" href="login.php">Beta-Tester</a>
-                                <a class="dropdown-item" href="login.php">Retailer</a>
-                            </div>
-                        </div> -->
+
                         <div class="dropdown">
                             <button class="btn dropdown-toggle diji-btn " type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Register / Join Us
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="register-invester.php">Register As Investor</a>
-                                <a class="dropdown-item" href="register-beta-tester.php">Register As Beta-Tester</a>
-                                <a class="dropdown-item" href="register-retailer.php">Register As Retailer</a>
-                                <!-- <a class="dropdown-item" href="login.php">Retailer</a> -->
+                                <a class="dropdown-item" href="{{ url('/register-investor') }}">Register As
+                                    Investor</a>
+                                <a class="dropdown-item" href="{{ url('/register-beta-tester') }}">Register As
+                                    Beta-Tester</a>
+                                <a class="dropdown-item" href="{{ url('/register-retailer') }}">Register As
+                                    Retailer</a>
+                                <!-- <a class="dropdown-item" href="{{ url('/login') }}">Retailer</a> -->
                             </div>
                         </div>
-                        <a href="login.php" class="diji-btn">Login</a>
+                        <a href="{{ url('/login') }}" class="diji-btn">Login</a>
                     </div>
                     <div class="canvas_btn">
                         <i class="fa fa-bars" aria-hidden="true"></i>
@@ -98,14 +85,14 @@
         </svg>
     </div>
     <ul class="mobile_menus">
-        <li class="menu_items"><a class="menu_links active_menu" href="index.php">Home</a></li>
-        <li class="menu_items"><a class="menu_links" href="about.php">About Us</a></li>
-        <li class="menu_items"><a class="menu_links" href="customer.php">Customers</a></li>
-        <li class="menu_items"><a class="menu_links" href="retailer.php">Retailers</a></li>
-        <li class="menu_items"><a class="menu_links" href="partner.php">Partners</a></li>
-        <li class="menu_items"><a class="menu_links" href="contact.php">Contact Us</a></li>
+        <li class="menu_items"><a class="menu_links active_menu" href="{{ url('/') }}">Home</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/about-us') }}">About Us</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/customers') }}">Customers</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/register-retailer') }}">Retailers</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/partners') }}">Partners</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/contact') }}">Contact Us</a></li>
         <li class="menu_items"><a class="menu_links" href="#">Register as tester</a></li>
-        <li class="menu_items"><a class="menu_links" href="login.php">Login</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/login') }}">Login</a></li>
         <li class="menu_items"><a class="menu_links" href="#">Download from Playstore</a></li>
         <li class="menu_items"><a class="menu_links" href="#">Download from Applestore</a></li>
     </ul>
