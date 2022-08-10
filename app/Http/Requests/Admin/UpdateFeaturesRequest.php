@@ -25,7 +25,7 @@ class UpdateFeaturesRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'is_active' => 'required',
+            'status' => 'required',
         ];
     }
 }

@@ -71,7 +71,7 @@
                                 <td>{!! $record->name !!}</td>
                                 <td>{!! $record->email !!}</td>
                                 <td>{!! $record->phone !!}</td>
-                                <td>{!! ($record->is_active == 1) ? '<span class="text-success">Active</span>':'<span class="text-danger">Blocked</span>' !!}</td>
+                                <td>{!! ($record->status == 1) ? '<span class="text-success">Active</span>':'<span class="text-danger">Blocked</span>' !!}</td>
 
                                 <td>{!! $record->created_at !!}</td>
 

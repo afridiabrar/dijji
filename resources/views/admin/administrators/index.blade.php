@@ -81,7 +81,7 @@
                                 <td>{!! $record->phone !!}</td>
                                 <td>{!! $record->email !!}</td>
                                 <td class="center text-center">
-                                    @if($record->is_active == 1)
+                                    @if($record->status == 1)
                                         <span class="text-success">Active</span>
                                     @else
                                         <span class="text-danger">Blocked</span>

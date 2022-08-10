@@ -76,7 +76,7 @@
                                                 alt="{!! $record->title !!}"style="width: 100px;" /></td>
                                     @endif
                                     <td>{!! $record->stars !!} Stars</td>
-                                    <td>{!! $record->is_active ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
+                                    <td>{!! $record->status ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
 
                                     <td class="center text-ce
                                 nter">

@@ -56,7 +56,8 @@
                         <thead>
                             <tr>
                                 <th>Title</th>
-                                <th>Slug</th>
+                                <th>Experience</th>
+                                <th>Salary</th>
                                 <th>location</th>
                                 <th>Status</th>
                                 <th class="text-center">Actions</th>
@@ -67,9 +68,12 @@
                                 <tr class="odd gradeX">
                                     <td>{!! $record->title !!}</td>
 
-                                    <td>{!! $record->slug !!}</td>
+                                    <td>{!! $record->experience !!}</td>
+                                    <td>{!! $record->salary !!}</td>
                                     <td>{!! $record->location !!}</td>
-                                    <td>{!! $record->is_active ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
+                                    <td>{!! $record->status
+                                        ? '<h6 class="alert alert-success">Active</h6>'
+                                        : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
 
                                     <td class="center text-center">
                                         <a href="{!! URL::route('admin.careers.show', $record->id) !!}" class="btn btn-xs blue" title="Show Record">

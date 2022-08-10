@@ -20,7 +20,7 @@ class Admin extends Authenticatable
         'phone',
         'email',
         'password',
-        'is_active',
+        'status',
     ];
 
 

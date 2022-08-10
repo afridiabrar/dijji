@@ -49,6 +49,23 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 
         /*
+         * locations
+         */
+
+        view()->composer('admin.locations.index', function ($view) {
+            $view->with(['pageTitle' => 'locations List']);
+        });
+        view()->composer('admin.locations.create', function ($view) {
+            $view->with(['pageTitle' => 'Add locations']);
+        });
+        view()->composer('admin.locations.show', function ($view) {
+            $view->with(['pageTitle' => 'Show locations']);
+        });
+        view()->composer('admin.locations.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit locations']);
+        });
+
+        /*
          * Administrators
          */
         view()->composer('admin.administrators.index', function ($view) {

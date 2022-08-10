@@ -68,7 +68,7 @@
                             <label class="col-md-2 control-label"><strong>Status:</strong> </label>
                             <div class="col-md-4">
                                 <label class="col-md-2 control-label">
-                                    @if ($data->is_active == 1)
+                                    @if ($data->status == 1)
                                         <span class="text-success">Active</span>
                                     @else
                                         <span class="text-danger">Blocked</span>

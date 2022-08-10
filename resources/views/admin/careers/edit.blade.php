@@ -45,13 +45,13 @@
                                     value="{{ old('title', $data->title) }}" class="form-control" />
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="slug" class="col-md-2 control-label">Slug *</label>
                             <div class="col-md-4">
                                 <input id="slug" type="text" name="slug" maxlength="190"
                                     value="{{ old('slug', $data->slug) }}" class="form-control" />
                             </div>
-                        </div>
+                        </div> --}}
 
 
                         <div class="form-group">
@@ -68,15 +68,27 @@
                                 </select>
                             </div>
                         </div>
-
                         <div class="form-group">
+                            <label for="experience" class="col-md-2 control-label">Experience *</label>
+                            <div class="col-md-4">
+                                <input type="text" id="experience" name="experience" maxlength="190"
+                                    value="{{ old('experience', $data->experience) }}" class="form-control" />
+                            </div>
+                        </div>  <div class="form-group">
+                            <label for="salary" class="col-md-2 control-label">Salary *</label>
+                            <div class="col-md-4">
+                                <input type="text" id="salary" name="salary" maxlength="190"
+                                    value="{{ old('salary', $data->salary) }}" class="form-control" />
+                            </div>
+                        </div>
+                        {{-- <div class="form-group">
                             <label for="content" class="col-md-2 control-label">Content</label>
                             <div class="col-md-8">
                                 <textarea name="content" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('content', $data->content) }}</textarea>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="slug" class="col-md-2 control-label">Meta Title</label>
                             <div class="col-md-8">
                                 <input id="meta_title" type="text" name="meta_title" maxlength="190"
@@ -94,17 +106,17 @@
                             <div class="col-md-8">
                                 <textarea name="meta_description" class="form-control" maxlength="65000" rows="3">{{ old('meta_description', $data->meta_description) }}</textarea>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label for="last_name" class="col-md-2 control-label">Status *</label>
                             <div class="col-md-4">
-                                <select class="form-control" name="is_active">
+                                <select class="form-control" name="status">
                                     <option value=""> - Select - </option>
                                     <option value="1"
-                                        {{ old('status', $data->is_active) == '1' ? 'selected="selected"' : '' }}>Active
+                                        {{ old('status', $data->status) == '1' ? 'selected="selected"' : '' }}>Active
                                     </option>
                                     <option value="0"
-                                        {{ old('status', $data->is_active) == '0' ? 'selected="selected"' : '' }}>
+                                        {{ old('status', $data->status) == '0' ? 'selected="selected"' : '' }}>
                                         Deactive
                                     </option>
                                 </select>

@@ -88,7 +88,7 @@
         <li class="menu_items"><a class="menu_links active_menu" href="{{ url('/') }}">Home</a></li>
         <li class="menu_items"><a class="menu_links" href="{{ url('/about-us') }}">About Us</a></li>
         <li class="menu_items"><a class="menu_links" href="{{ url('/customers') }}">Customers</a></li>
-        <li class="menu_items"><a class="menu_links" href="{{ url('/register-retailer') }}">Retailers</a></li>
+        <li class="menu_items"><a class="menu_links" href="{{ url('/Retailers') }}">Retailers</a></li>
         <li class="menu_items"><a class="menu_links" href="{{ url('/partners') }}">Partners</a></li>
         <li class="menu_items"><a class="menu_links" href="{{ url('/contact') }}">Contact Us</a></li>
         <li class="menu_items"><a class="menu_links" href="#">Register as tester</a></li>

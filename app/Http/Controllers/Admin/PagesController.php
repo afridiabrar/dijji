@@ -25,7 +25,7 @@ class PagesController extends Controller
     {
         $extension = $file->getClientOriginalExtension(); // getting file extension
         $filename  = 'media-file-' . time() . '.' . $extension;
-        $file->move(uploadsDir('/video'), $filename);
+        $file->move(uploadsDir('/pages'), $filename);
         return $filename;
     }
     public function index()
@@ -66,7 +66,11 @@ class PagesController extends Controller
                     '_method'
                 ]
             );
-
+            if ($request->hasfile('media')) {
+                $file = $request->file('media');
+                $getImage = $this->image_upload($file);
+                $data['media'] = $getImage;
+            }
             Page::create($data);
 
             return redirect()
@@ -132,14 +136,11 @@ class PagesController extends Controller
                 ]
             );
 
-            if ($request->hasFile('video')) {
-                $file = $request->file('video');
-                $filename = Carbon::now()->toDateString() . "-" . uniqid() . "." . $file->getClientOriginalExtension();
-                $path = uploadsDir('/video');
-                $path =  $file->move($path, $filename);
-                $data['video'] = $filename;
+            if ($request->hasFile('media')) {
+                $file = $request->file('media');
+                $getImage = $this->image_upload($file);
+                $data['media'] = $getImage;
             }
-
             Page::where('id', $id)->update($data);
 
             return redirect()

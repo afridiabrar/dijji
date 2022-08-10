@@ -19,7 +19,7 @@
                             <a href="{{ url('/') }}"><i class="fa fa-times" aria-hidden="true"></i></a>
                         </div>
                         <div class="wrapper">
-                            <h4>Welcome Back to Dijii's Portal</h4>
+                            {!! $cmsPage->content !!}
                             <p>Not a Member ?</p>
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle diji-btn " type="button" id="dropdownMenuButton"
@@ -28,7 +28,8 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="{{ url('/register-invester') }}">Register As Investor</a>
-                                    <a class="dropdown-item" href="{{ url('/register-beta-tester') }}">Register As Beta-Tester</a>
+                                    <a class="dropdown-item" href="{{ url('/register-beta-tester') }}">Register As
+                                        Beta-Tester</a>
                                     <a class="dropdown-item" href="{{ url('/register-retailer') }}">Register As Retailer</a>
                                 </div>
                             </div>
@@ -92,12 +93,11 @@
                                             <div class="text-center have_account">
                                                 Create an account / join the waiting list
                                                 <!-- Already have an account?
-                                                <a href="#">Sign in</a> -->
+                                                        <a href="#">Sign in</a> -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="profile" role="tabpanel"
-                                        aria-labelledby="profile-tab">
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                         <div class="form-start">
                                             <div class="form-group">
                                                 <input type="email" placeholder="Email" class="form-control">
@@ -107,8 +107,7 @@
                                             </div>
                                             <div class="recaptcha">
                                                 <div class="g-recaptcha"
-                                                    data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7
-"></div>
+                                                    data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
 
                                             </div>
                                             <div class="button-group">
@@ -138,9 +137,7 @@
                                                 <input type="password" placeholder="Password" class="form-control">
                                             </div>
                                             <div class="recaptcha">
-                                                <div class="g-recaptcha"
-                                                    data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7
-"></div>
+                                                <div class="g-recaptcha" data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
 
                                             </div>
                                             <div class="button-group">

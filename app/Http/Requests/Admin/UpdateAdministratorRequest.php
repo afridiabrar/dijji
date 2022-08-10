@@ -28,7 +28,7 @@ class UpdateAdministratorRequest extends FormRequest
             'last_name'  => 'required|max:32',
             'phone'      => 'required|max:24',
             'email'      => 'required|email|max:128',
-            'is_active'  => 'required'
+            'status'  => 'required'
         ];
     }
 }

@@ -40,7 +40,7 @@ class CareersController extends Controller
      */
     public function create()
     {
-        $records = Locations::where('is_active', 1)->get();
+        $records = Locations::where('status', 1)->get();
 
         return view('admin.careers.create', compact('records'));
     }
@@ -102,7 +102,7 @@ class CareersController extends Controller
     {
         try {
             $data = Careers::find($id);
-            $records = Locations::where('is_active', 1)->get();
+            $records = Locations::where('status', 1)->get();
 
             return view('admin.careers.edit', compact('data', 'records'));
         } catch (\Exception $exception) {

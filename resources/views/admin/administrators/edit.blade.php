@@ -71,10 +71,10 @@
                     <div class="form-group">
                         <label for="last_name" class="col-md-2 control-label">Status *</label>
                         <div class="col-md-4">
-                            <select class="form-control" name="is_active">
+                            <select class="form-control" name="status">
                                 <option value=""> - Select - </option>
-                                <option value="1" {{ old('is_active', $data->is_active) == '1' ? 'selected="selected"' : '' }}>Active</option>
-                                <option value="0" {{ old('is_active', $data->is_active) == '0' ? 'selected="selected"' : '' }}>Blocked</option>
+                                <option value="1" {{ old('status', $data->status) == '1' ? 'selected="selected"' : '' }}>Active</option>
+                                <option value="0" {{ old('status', $data->status) == '0' ? 'selected="selected"' : '' }}>Blocked</option>
                             </select>
                         </div>
                     </div>

@@ -17,6 +17,7 @@ class CreateFaqsTable extends Migration
             $table->id();
             $table->string('question');
             $table->text('answer');
+            $table->boolean('category')->default(1)->comment('1 for Regular, 2 for Environmental impact, 3 for Security and storage, 4 for Miscellaneous');
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

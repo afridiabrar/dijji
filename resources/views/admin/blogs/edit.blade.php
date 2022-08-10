@@ -94,13 +94,13 @@
                         <div class="form-group">
                             <label for="last_name" class="col-md-2 control-label">Status *</label>
                             <div class="col-md-4">
-                                <select class="form-control" name="is_active">
+                                <select class="form-control" name="status">
                                     <option value=""> - Select - </option>
                                     <option value="1"
-                                        {{ old('status', $data->is_active) == '1' ? 'selected="selected"' : '' }}>Active
+                                        {{ old('status', $data->status) == '1' ? 'selected="selected"' : '' }}>Active
                                     </option>
                                     <option value="0"
-                                        {{ old('status', $data->is_active) == '0' ? 'selected="selected"' : '' }}>Deactive
+                                        {{ old('status', $data->status) == '0' ? 'selected="selected"' : '' }}>Deactive
                                     </option>
                                 </select>
                             </div>

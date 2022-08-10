@@ -25,7 +25,7 @@ class UpdateSlidersRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'is_active' => 'required',
+            'status' => 'required',
         ];
     }
 }

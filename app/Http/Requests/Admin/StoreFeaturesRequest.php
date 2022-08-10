@@ -26,7 +26,7 @@ class StoreFeaturesRequest extends FormRequest
         return [
             'name' => 'required',
             'image' => 'required',
-            'is_active' => 'required',
+            'status' => 'required',
         ];
     }
 }

@@ -71,7 +71,7 @@
                                         <td><img src="{!! asset('uploads/features/no-image.jpg') !!}"
                                                 alt="{!! $record->title !!}"style="width: 100px;" /></td>
                                     @endif
-                                    <td>{!! $record->is_active
+                                    <td>{!! $record->status
                                         ? '<h6 class="alert alert-success">Active</h6>'
                                         : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
 

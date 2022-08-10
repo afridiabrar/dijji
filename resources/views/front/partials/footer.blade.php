@@ -63,7 +63,7 @@
                                 <h5>General</h5>
                             </div>
                             <ul class="footer-links">
-                                <li><a href="{{ url('/register-retailer') }}#how_work">How it Works?</a></li>
+                                <li><a href="{{ url('/retailer') }}#how_work">How it Works?</a></li>
                                 <li><a href="{{ url('/portal-login-beta') }}">Login</a></li>
                                 <li><a href="{{ url('/partners') }}#charity">Charity</a></li>
                                 <li><a href="{{ url('/portal-login-investor') }}">Investor Portal</a></li>
@@ -78,7 +78,7 @@
                             <ul class="footer-links">
                                 <li><a href="{{ url('/about-us') }}#faqs">FAQs</a></li>
                                 <li><a href="{{ url('/register-investor') }}">Join Now</a></li>
-                                <li><a href="{{ url('/register-retailer') }}">For Retailers</a></li>
+                                <li><a href="{{ url('/retailer') }}">For Retailers</a></li>
                                 <li><a href="{{ url('/contact') }}">Contact Us</a></li>
                             </ul>
                         </div>

@@ -19,7 +19,7 @@ class CreatePagesTable extends Migration
             $table->string('page_title');
             $table->string('slug');
             $table->text('content')->nullable();
-            $table->text('our_mission')->nullable();
+            $table->text('media')->nullable();
             $table->text('our_vision')->nullable();
             $table->text('page_name')->nullable();
             $table->string('meta_title')->nullable();

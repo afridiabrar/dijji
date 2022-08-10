@@ -23,7 +23,7 @@ class CreateBlogsTable extends Migration
             $table->string('meta_title')->nullable();
             $table->text('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();
-            $table->unsignedTinyInteger('is_active')->default(0);
+            $table->unsignedTinyInteger('status')->default(0);
             $table->timestamps();
         });
     }

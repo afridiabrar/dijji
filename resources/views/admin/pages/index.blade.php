@@ -55,6 +55,7 @@
                             <tr>
                                 <th>Page Title</th>
                                 <th>Slug</th>
+                                <th>content</th>
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>
@@ -64,6 +65,8 @@
                                     <td>{!! $record->page_title !!}</td>
                                     {{-- <td>{!! Str::words(strip_tags($record->content), 10) !!}</td> --}}
                                     <td>{!! $record->slug !!}</td>
+                                    <td>{!! strip_tags($record->content) !!}</td>
+
                                     <td class="center text-center">
                                         <a href="{!! URL::route('admin.pages.show', $record->id) !!}" class="btn btn-xs blue" title="Show Record">
                                             <i class="fa fa-search"></i>

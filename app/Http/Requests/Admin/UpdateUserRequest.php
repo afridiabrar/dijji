@@ -28,7 +28,7 @@ class UpdateUserRequest extends FormRequest
              'phone'         => 'required|max:24',
              'areas_of_expertise' => 'required',
             //  'roles'         => 'required',
-             'is_active'     => 'required'
+             'status'     => 'required'
         ];
     }
 }

@@ -58,25 +58,25 @@ class AdminMenu
                     '<i class="fa fa-th"></i> <span class="title">Blogs</span>'
                 ))
 
-                ->add(Link::toRoute(
-                    'admin.news_slides.index',
-                    '<i class="fa fa-th"></i> <span class="title">New Slider</span>'
-                ))
-                ->add(Link::toRoute(
-                    'admin.sections.index',
-                    '<i class="fa fa-th"></i> <span class="title">Sections</span>'
-                ))
+                // ->add(Link::toRoute(
+                //     'admin.news_slides.index',
+                //     '<i class="fa fa-th"></i> <span class="title">New Slider</span>'
+                // ))
+                // ->add(Link::toRoute(
+                //     'admin.sections.index',
+                //     '<i class="fa fa-th"></i> <span class="title">Sections</span>'
+                // ))
                 ->add(Link::toRoute(
                     'admin.testimonials.index',
                     '<i class="fa fa-th"></i> <span class="title">Testimonials</span>'
                 ))
-                ->add(Link::toRoute(
-                    'admin.features.index',
-                    '<i class="fa fa-th"></i> <span class="title">Features</span>'
-                ))->add(Link::toRoute(
-                    'admin.sliders.index',
-                    '<i class="fa fa-th"></i> <span class="title">Sliders</span>'
-                ))
+                // ->add(Link::toRoute(
+                //     'admin.features.index',
+                //     '<i class="fa fa-th"></i> <span class="title">Features</span>'
+                // ))->add(Link::toRoute(
+                //     'admin.sliders.index',
+                //     '<i class="fa fa-th"></i> <span class="title">Sliders</span>'
+                // ))
                 ->add(Link::toRoute(
                     'admin.locations.index',
                     '<i class="fa fa-th"></i> <span class="title">Locations</span>'

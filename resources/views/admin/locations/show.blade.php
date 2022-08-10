@@ -41,7 +41,7 @@
                     <div class="form-group">
                         <label class="col-md-2 control-label"><strong>Status:</strong> </label>
                         <div class="col-md-8">
-                           {!! $data->is_active ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}
+                           {!! $data->status ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}
 
                         </div>
                     </div>

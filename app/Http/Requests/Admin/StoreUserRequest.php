@@ -29,7 +29,7 @@ class StoreUserRequest extends FormRequest
              'email'         => 'required|email:strict,filter|unique:users|max:128',
              'areas_of_expertise' => 'required',
              'roles'         => 'required',
-             'is_active'     => 'required'
+             'status'     => 'required'
         ];
     }
 }

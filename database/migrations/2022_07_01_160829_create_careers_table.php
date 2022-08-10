@@ -16,10 +16,12 @@ class CreateCareersTable extends Migration
         Schema::create('careers', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->nullable();
+            $table->string('experience')->nullable();
+            $table->string('salary')->nullable();
             $table->text('content')->nullable();
             $table->string('location');
-            $table->unsignedTinyInteger('is_active')->default(0);
+            $table->unsignedTinyInteger('status')->default(0);
             $table->string('meta_title')->nullable();
             $table->text('meta_keywords')->nullable();
             $table->text('meta_description')->nullable();

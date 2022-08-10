@@ -51,41 +51,18 @@
                                 <textarea name="content" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('content', $data->content) }}</textarea>
                             </div>
                         </div>
-                        @if ($data->id == '12' || $data->id == '6')
+                        <div class="form-group">
+                            <label for="media" class="col-md-2 control-label">Media </label>
+                            <div class="col-md-4">
+                                @if ($data->media != '' && file_exists(uploadsDir('pages/') . $data->media))
+                                    <img src="{!! asset('uploads/pages/' . $data->media) !!}" alt="{!! $data->title !!}"
+                                        title="{!! $data->title !!}" style="width: 100px;" />
+                                @endif
 
-                            @if ($data->id == '12')
-                                <div class="form-group">
-                                    <label for="content" class="col-md-2 control-label">Faq Section</label>
-                                    <div class="col-md-8">
-                                        <textarea name="faq_section" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('faq_section', $data->faq_section) }}</textarea>
-                                    </div>
-                                </div>
-                            @endif
+                                <input type="file" name="media" class="form-control" />
 
-
-                            <div class="form-group">
-                                <label for="content" class="col-md-2 control-label">Video Preview</label>
-                                <div class="col-md-8">
-                                    @if ($data->video != '' && file_exists(uploadsDir('video/') . $data->video))
-                                        <video id="playerID" controls style="width: 100%;">
-                                            <source src="{!! asset('uploads/video/' . $data->video) !!}" type="video/mp4">
-                                            <source src="movie.ogg" type="video/ogg">
-                                            Your browser does not support the video tag.
-                                        </video>
-                                    @endif
-                                </div>
                             </div>
-                            <div class="form-group">
-
-
-                                <label for="logo" class="col-md-2 control-label">Video </label>
-                                <div class="col-md-8">
-
-                                    <input type="file" name="video" class="form-control" />
-
-                                </div>
-                            </div>
-                        @endif
+                        </div>
 
 
                         <div class="form-group">

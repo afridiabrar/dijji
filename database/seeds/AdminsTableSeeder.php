@@ -26,7 +26,7 @@ class AdminsTableSeeder extends Seeder
             'phone'      => '123456789',
             'email'      => 'admin@dijji.com',
             'password'   => bcrypt('admin123'),
-            'is_active'  => 1,
+            'status'  => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);

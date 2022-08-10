@@ -46,7 +46,8 @@
                         <div class="form-group">
                             <label for="last_name" class="col-md-2 control-label">Status *</label>
                             <div class="col-md-4">
-                                <select class="form-control" name="is_active">
+                                <select class="form-control" name="
+                                ">
                                     <option value=""> - Select - </option>
                                     <option value="1" {{ old('1') }}>Active
                                     </option>

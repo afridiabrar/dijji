@@ -63,7 +63,7 @@
                             @foreach ($records as $key => $record)
                                 <tr class="odd gradeX">
                                     <td>{!! $record->name !!}</td>
-                                    <td>{!! $record->is_active ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
+                                    <td>{!! $record->status ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
                                     <td class="center text-center">
                                         <a href="{!! URL::route('admin.locations.show', $record->id) !!}" class="btn btn-xs blue" title="Show Record">
                                             <i class="fa fa-search"></i>
