@@ -16,6 +16,7 @@
 <!-- Slick Slider CDN -->
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Wow Js CDN -->
 <script src="{{ frontjs('wow.min.js') }}"></script>
