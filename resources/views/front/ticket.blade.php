@@ -95,7 +95,7 @@
                     <div class="col-md-6">
                         <div class="action_group">
                             <div class="recaptcha">
-                                <div class="g-recaptcha" data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
+                                <div class="g-recaptcha" data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
                             </div>
                             <div class="button-group">
                                 <button class="btn" type="submit">Submit</button>
@@ -112,8 +112,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                    Launch demo modal
-                                                                </button> -->
+                                                                        Launch demo modal
+                                                                    </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
