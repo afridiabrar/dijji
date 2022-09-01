@@ -9,6 +9,14 @@
   --second-color: #4270ec;
 }
 
+.title-wrapper {
+  background-color: #0cecbf !important;
+}
+
+button#widgetIcon {
+  background: #0cecbf !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -494,6 +502,7 @@ header#header-top .right_content .dropdown-menu {
     font-size: 12px;
   }
 }
+
 @media(max-width:1440px) {
   header#header-top .navbar_menus ul.menus li.menu-items a {
     padding: 0 10px;
@@ -562,11 +571,13 @@ header#header-top .right_content .dropdown-menu {
     font-size: 9px;
   }
 }
+
 @media(max-width:1130px) {
   header#header-top {
     padding: 0 85px;
   }
 }
+
 @media (max-width: 1100px) {
   header#header-top {
     padding: 0 10px;
@@ -608,16 +619,20 @@ div#subscript_modal .modal-body h4 {
 div#register_modal .modal-body p {
   text-align: center;
 }
-div#contact_modal .modal-body p{
+
+div#contact_modal .modal-body p {
   text-align: center;
 }
+
 @media (min-width: 576px) {
   div#register_modal .modal-dialog {
     margin: 15% auto;
   }
+
   div#subscript_modal .modal-dialog {
     margin: 15% auto;
   }
+
   div#contact_modal .modal-dialog {
     margin: 15% auto;
   }
@@ -647,12 +662,14 @@ div#contact_modal .modal-body p{
   margin-top: -50px;
   /* width: 85%; */
 }
-@media(max-width:425px){
+
+@media(max-width:425px) {
   .banner_sec .center-mobile img {
     margin-top: unset;
     width: 100%;
+  }
 }
-}
+
 .banner_sec .go-to-bottom {
   text-align: center;
   position: relative;
@@ -1224,7 +1241,7 @@ div#contact_modal .modal-body p{
     -moz-transform: scaleY(1.13);
     -ms-transform: scaleY(1.13);
     -o-transform: scaleY(1.13);
-}
+  }
 }
 
 @media(max-width:1200px) {
@@ -1234,8 +1251,9 @@ div#contact_modal .modal-body p{
     -moz-transform: scaleY(1.15);
     -ms-transform: scaleY(1.15);
     -o-transform: scaleY(1.15);
+  }
 }
-}
+
 @media(max-width:1165px) {
   .landing_banner .img_box img {
     transform: scaleY(1.25);
@@ -1243,8 +1261,9 @@ div#contact_modal .modal-body p{
     -moz-transform: scaleY(1.25);
     -ms-transform: scaleY(1.25);
     -o-transform: scaleY(1.25);
+  }
 }
-}
+
 @media (max-width: 1100px) {
   .landing_banner .contentDv {
     padding: 20px 10px 60px 0;
@@ -1273,7 +1292,7 @@ div#contact_modal .modal-body p{
     -moz-transform: scaleY(1.399);
     -ms-transform: scaleY(1.399);
     -o-transform: scaleY(1.399);
-}
+  }
 
   .landing_banner {
     padding: 0;
