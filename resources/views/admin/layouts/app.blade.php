@@ -23,20 +23,19 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta content="" name="description" />
     <meta content="" name="author" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link rel="icon" type="image/x-icon" href="{{ frontimage('favicon.png') }}">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
         type="text/css" />
     <link href="{{ asset('assets/admin/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"
         type="text/css" />
-    <link href="{{ asset('assets/admin/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"
-        type="text/css" />
-    <link href="{{ asset('assets/admin/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet"
-        type="text/css" />
+    <link href="{{ asset('assets/admin/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-    <link href="{{ asset('assets/admin/plugins/gritter/css/jquery.gritter.css') }}" rel="stylesheet"
+    <link href="{{ asset('assets/admin/plugins/gritter/css/jquery.gritter.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet"
         type="text/css" />
-    <link href="{{ asset('assets/admin/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}"
-        rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/admin/plugins/fullcalendar/fullcalendar/fullcalendar.css') }}" rel="stylesheet"
         type="text/css" />
     <link href="{{ asset('assets/admin/plugins/jqvmap/jqvmap/jqvmap.css') }}" rel="stylesheet" type="text/css" />
@@ -55,12 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{ asset('assets/admin/css/print.css') }}" rel="stylesheet" type="text/css" media="print" />
     <link href="{{ asset('assets/admin/css/custom.css') }}" rel="stylesheet" type="text/css" />
     <!-- END THEME STYLES -->
-    {{-- <link rel="shortcut icon" href="{{ asset('assets/admin/favicon.png') }}"/> --}}
-    @if (isset($siteSettings->logo) && adminHasAssets($siteSettings->logo))
-        <link rel="shortcut icon" href="{!! asset(uploadsDir() . $siteSettings->logo) !!}" />
-    @else
-        <link rel="shortcut icon" href="{!! asset('logo.png') !!}" />
-    @endif
+
     <style>
         .redoc-wrap {
             padding-left: 250px;
@@ -97,8 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- BEGIN SIDEBAR MENU -->
                 {{ Menu::admin(auth()->user()) }}
                 <!-- END SIDEBAR MENU -->
-                <form id="logout-form" action="{{ route('admin.auth.logout') }}" method="POST"
-                    style="display: none;">
+                <form id="logout-form" action="{{ route('admin.auth.logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
             </div>

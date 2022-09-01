@@ -18,7 +18,7 @@ class CreateTestimonialsTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('designation');
-            $table->integer('stars')->default(0);
+            $table->integer('stars')->default(0)->nullable();
             $table->text('content');
             $table->boolean('status')->default(0);
             $table->timestamps();

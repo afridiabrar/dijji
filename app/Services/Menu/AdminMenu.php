@@ -33,51 +33,19 @@ class AdminMenu
                 //     'admin.contact-queries.index',
                 //     '<i class="fa fa-envelope"></i> <span class="title">Contact Queries</span>'
                 // ))
-                ->add(Link::toRoute(
-                    'admin.newsletter-subscribers.index',
-                    '<i class="fa fa-envelope-o"></i> <span class="title">Newsletter Subscribers</span>'
-                ))
-                ->add(Link::toRoute(
-                    'admin.contact-queries.index',
-                    '<i class="fa fa-envelope-o"></i> <span class="title">Contact Query</span>'
-                ))
-                ->add(Link::toRoute(
-                    'admin.apply_jobs.index',
-                    '<i class="fa fa-th"></i> <span class="title">Apply Jobs</span>'
-                ))
-                ->add(Link::toRoute(
+                  ->add(Link::toRoute(
                     'admin.pages.index',
                     '<i class="fa fa-th"></i> <span class="title">Pages</span>'
                 ))
-                ->add(Link::toRoute(
-                    'admin.careers.index',
-                    '<i class="fa fa-th"></i> <span class="title">Career/Jobs</span>'
-                ))
-                ->add(Link::toRoute(
+                 ->add(Link::toRoute(
                     'admin.blogs.index',
                     '<i class="fa fa-th"></i> <span class="title">Blogs</span>'
                 ))
-
-                // ->add(Link::toRoute(
-                //     'admin.news_slides.index',
-                //     '<i class="fa fa-th"></i> <span class="title">New Slider</span>'
-                // ))
-                // ->add(Link::toRoute(
-                //     'admin.sections.index',
-                //     '<i class="fa fa-th"></i> <span class="title">Sections</span>'
-                // ))
-                ->add(Link::toRoute(
-                    'admin.testimonials.index',
-                    '<i class="fa fa-th"></i> <span class="title">Testimonials</span>'
+                  ->add(Link::toRoute(
+                    'admin.teams.index',
+                    '<i class="fa fa-th"></i> <span class="title">Teams</span>'
                 ))
-                // ->add(Link::toRoute(
-                //     'admin.features.index',
-                //     '<i class="fa fa-th"></i> <span class="title">Features</span>'
-                // ))->add(Link::toRoute(
-                //     'admin.sliders.index',
-                //     '<i class="fa fa-th"></i> <span class="title">Sliders</span>'
-                // ))
-                ->add(Link::toRoute(
+                   ->add(Link::toRoute(
                     'admin.locations.index',
                     '<i class="fa fa-th"></i> <span class="title">Locations</span>'
                 ))
@@ -89,6 +57,53 @@ class AdminMenu
                     'admin.administrators.index',
                     '<i class="fa fa-user"></i> <span class="title">Admin Users</span>'
                 ))
+                ->add(Link::toRoute(
+                    'admin.newsletter-subscribers.index',
+                    '<i class="fa fa-envelope-o"></i> <span class="title">Newsletter Subscribers</span>'
+                ))
+                ->add(Link::toRoute(
+                    'admin.contact-queries.index',
+                    '<i class="fa fa-envelope-o"></i> <span class="title">Contact Query</span>'
+                ))
+                ->add(Link::toRoute(
+                    'admin.tickets.index',
+                    '<i class="fa fa-envelope-o"></i> <span class="title">Tickets</span>'
+                ))
+                ->add(Link::toRoute(
+                    'admin.apply_jobs.index',
+                    '<i class="fa fa-th"></i> <span class="title">Apply Jobs</span>'
+                ))
+              
+                ->add(Link::toRoute(
+                    'admin.benefits.index',
+                    '<i class="fa fa-th"></i> <span class="title">Benefit</span>'
+                ))
+                ->add(Link::toRoute(
+                    'admin.careers.index',
+                    '<i class="fa fa-th"></i> <span class="title">Career/Jobs</span>'
+                ))
+              
+                ->add(Link::toRoute(
+                    'admin.testimonials.index',
+                    '<i class="fa fa-th"></i> <span class="title">Testimonials</span>'
+                ))
+                // ->add(Link::toRoute(
+                //     'admin.news_slides.index',
+                //     '<i class="fa fa-th"></i> <span class="title">New Slider</span>'
+                // ))
+                // ->add(Link::toRoute(
+                //     'admin.sections.index',
+                //     '<i class="fa fa-th"></i> <span class="title">Sections</span>'
+                // ))
+              
+                // ->add(Link::toRoute(
+                //     'admin.features.index',
+                //     '<i class="fa fa-th"></i> <span class="title">Features</span>'
+                // ))->add(Link::toRoute(
+                //     'admin.sliders.index',
+                //     '<i class="fa fa-th"></i> <span class="title">Sliders</span>'
+                // ))
+             
                 ->add(Link::toRoute(
                     'admin.site-settings.index',
                     '<i class="fa fa-cog"></i> <span class="title">Site Settings</span>'

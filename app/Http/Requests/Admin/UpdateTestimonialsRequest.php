@@ -26,7 +26,6 @@ class UpdateTestimonialsRequest extends FormRequest
         return [
             'name' => 'required',
             'designation' => 'required',
-            'stars' => 'required',
             'content' => 'required',
         ];
     }

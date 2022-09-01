@@ -80,6 +80,36 @@ Breadcrumbs::for('admin.pages.edit', function ($breadcrumbs, $data) {
 
 /*
 |--------------------------------------------------------------------------
+| Teams
+|--------------------------------------------------------------------------
+*/
+
+// Teams > Listing
+Breadcrumbs::for('admin.teams.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Team List', route('admin.teams.index'));
+});
+
+// Teams > New
+Breadcrumbs::for('admin.teams.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.teams.index');
+    $breadcrumbs->push('Add', route('admin.teams.create'));
+});
+
+// Teams > Show
+Breadcrumbs::for('admin.teams.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.teams.index');
+    $breadcrumbs->push($data->name, route('admin.teams.show', $data->id));
+});
+
+// Teams > Edit
+Breadcrumbs::for('admin.teams.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.teams.index', $data);
+    $breadcrumbs->push('Edit', route('admin.teams.edit', $data->id));
+});
+
+/*
+|--------------------------------------------------------------------------
 | Blogs
 |--------------------------------------------------------------------------
 */
@@ -107,7 +137,6 @@ Breadcrumbs::for('admin.blogs.edit', function ($breadcrumbs, $data) {
     $breadcrumbs->parent('admin.blogs.index', $data);
     $breadcrumbs->push('Edit', route('admin.blogs.edit', $data->id));
 });
-
 /*
 |--------------------------------------------------------------------------
 | Site Settings
@@ -180,7 +209,23 @@ Breadcrumbs::for('admin.contact-queries.show', function ($breadcrumbs, $data) {
     $breadcrumbs->parent('admin.contact-queries.index');
     $breadcrumbs->push($data->first_name . ' ' . $data->last_name, route('admin.contact-queries.show', $data->id));
 });
+/*
+|--------------------------------------------------------------------------
+| Ticket
+|--------------------------------------------------------------------------
+*/
 
+// Ticket
+Breadcrumbs::for('admin.tickets.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Ticket List', route('admin.tickets.index'));
+});
+
+// Ticket > Show
+Breadcrumbs::for('admin.tickets.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.tickets.index');
+    $breadcrumbs->push($data->first_name . ' ' . $data->last_name, route('admin.tickets.show', $data->id));
+});
 /*
 |--------------------------------------------------------------------------
 | Newsletter Subscriber
@@ -254,6 +299,29 @@ Breadcrumbs::for('admin.projects.edit', function ($breadcrumbs, $data) {
 });
 
 
+
+Breadcrumbs::for('admin.benefits.index', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.dashboard.index');
+    $breadcrumbs->push('Benefits List', route('admin.benefits.index'));
+});
+
+// projects > New
+Breadcrumbs::for('admin.benefits.create', function ($breadcrumbs) {
+    $breadcrumbs->parent('admin.benefits.index');
+    $breadcrumbs->push('Add', route('admin.benefits.create'));
+});
+
+// projects > Show
+Breadcrumbs::for('admin.benefits.show', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.benefits.index');
+    $breadcrumbs->push('show', route('admin.benefits.show', $data->id));
+});
+
+// projects > Edit
+Breadcrumbs::for('admin.benefits.edit', function ($breadcrumbs, $data) {
+    $breadcrumbs->parent('admin.benefits.show', $data);
+    $breadcrumbs->push('Edit', route('admin.benefits.edit', $data->id));
+});
 
 Breadcrumbs::for('admin.sections.index', function ($breadcrumbs) {
     $breadcrumbs->parent('admin.dashboard.index');
@@ -473,7 +541,7 @@ Breadcrumbs::for('admin.apply_jobs.create', function ($breadcrumbs) {
 // _slide > Show
 Breadcrumbs::for('admin.apply_jobs.show', function ($breadcrumbs, $data) {
     $breadcrumbs->parent('admin.apply_jobs.index');
-    $breadcrumbs->push($data->f_name, route('admin.apply_jobs.show', $data->id));
+    $breadcrumbs->push($data->fullname, route('admin.apply_jobs.show', $data->id));
 });
 
 // _slide > Edit

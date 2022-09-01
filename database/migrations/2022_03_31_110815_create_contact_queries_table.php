@@ -15,9 +15,9 @@ class CreateContactQueriesTable extends Migration
     {
         Schema::create('contact_queries', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 32);
-            $table->string('organization', 32);
-            $table->string('email', 128);
+            $table->string('fname', 32);
+            $table->string('lname', 32);
+            $table->string('email', 128);   
             $table->string('phone', 24);
             $table->text('message');
             $table->boolean('is_read')->default(0);

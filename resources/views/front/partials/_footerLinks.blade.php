@@ -128,6 +128,9 @@
             easing: "easeOutExpo",
             delay: 1000
         });
+    $('input[type="checkbox"]').change(function() {
+        this.value = (Number(this.checked));
+    });
 </script>
 
 <!-- backtotop end-->

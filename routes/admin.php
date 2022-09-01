@@ -54,6 +54,7 @@ Route::name('admin.')->group(
         Route::resource('administrators', 'AdministratorsController');
         Route::resource('pages', 'PagesController');
         Route::resource('blogs', 'BlogsController');
+        Route::resource('teams', 'TeamsController');
         Route::resource('careers', 'CareersController');
         Route::resource('locations', 'LocationController');
         Route::resource('testimonials', 'TestimonialsController');
@@ -65,8 +66,10 @@ Route::name('admin.')->group(
         Route::resource('site-settings', 'SiteSettingsController');
         //        Route::resource('users', 'UsersController');
         Route::resource('newsletter-subscribers', 'NewsletterSubscriberController');
+        Route::resource('tickets', 'TicketsController');
         Route::resource('contact-queries', 'ContactQueryController');
         Route::resource('faqs', 'FaqController');
+        Route::resource('benefits', 'BenefitsController');
         Route::get('country-state-city', 'CountryStateCityController@index');
         Route::post('get-states-by-country', 'CountryStateCityController@getState');
         Route::post('get-cities-by-state', 'CountryStateCityController@getCity');

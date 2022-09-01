@@ -1,0 +1,125 @@
+.career_detail_sec .career-dollar {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid;
+    margin-bottom: 2rem;
+}
+.career_detail_sec .career-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.career_detail_sec .apply-btn .btn {
+    border-radius: 0;
+    background: #0cecbf;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+section.career_detail_sec {
+    box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 16%);
+    padding: 2rem;
+    border-radius: 5px;
+}
+.career_detail_sec .career-dollar p {
+    margin-bottom: 0;
+}
+.modal-header {
+    border-bottom: 0;
+}
+.career_detail_modal .modal-body {
+    padding: 10px 2rem;
+}
+.career_detail_modal .modal-body .form-control {
+    line-height: 1.5;
+    padding-left: 1.5rem;
+}
+p.aftj {
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid #BCBCBC;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem;
+    color: #000;
+    font-size: 22px;
+    font-family: "Gotham Rounded", sans-serif;
+}
+.avatar-edit label {
+    position: relative;
+    /* right: 3rem; */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background: black;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 15px;
+    padding: 20px 20px;
+    line-height: 0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin: 13px 0;
+    font-size: 11px;
+}
+.avatar-edit input {
+    display: none;
+}
+.filter_dv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 60px 0;
+}
+.filter_dv p {
+    margin: 0;
+}
+.filter_dv .filters_btn {
+    display: flex;
+    align-items: center;
+}
+.filter_dv .filters_btn .form-group {
+    margin: 0 0 0 10px;
+}
+.filter_dv .filters_btn .form-group .form-control {
+    background: #fff9f6;
+    border-radius: 0;
+    border: 0;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #300c44;
+    font-weight: 400;
+}
+@media(min-width:1024px){
+    .career_detail_modal .modal-dialog {
+        max-width: 900px;
+        margin: 2rem auto;
+    }
+}
+.career_detail_modal .modal-body form {
+    margin-top: 2rem;
+}
+.career_detail_modal .modal-body form .btn{
+    border-radius: 0;
+    background: #0cecbf;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}

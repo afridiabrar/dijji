@@ -24,15 +24,18 @@ Route::name('front.')->group(
 
         Route::get('/', 'IndexController@index')->name('index');
         Route::get('/{slug}', 'IndexController@page')->name('page');
-        Route::get('/careers', 'IndexController@careers')->name('careers');
-        Route::get('career_detail/{id?}/{slug?}', 'IndexController@career_detail')->name('career_detail');
-        Route::get('/blogs', 'IndexController@blogs')->name('blogs');
-        Route::get('apply-job/{id?}', 'IndexController@apply_job')->name('apply-job');
-        Route::post('submit-apply-job', 'IndexController@submit_apply_job')->name('submit-apply-job');
-        Route::get('blog/{id?}/{slug?}', 'IndexController@blog')->name('blog');
-        Route::get('/testimonials', 'IndexController@testimonials')->name('testimonials');
-        Route::post('/contact_query', 'IndexController@contact_query')->name('contact_query');
         Route::post('/subscribe', 'IndexController@subscribe')->name('subscribe');
-        Route::post('/request_submit', 'IndexController@request_submit')->name('request_submit');
+        Route::post('/submit_ticket', 'IndexController@submit_ticket')->name('submit_ticket');
+        Route::post('/submit_query', 'IndexController@submit_query')->name('submit_query');
+        Route::post('/subscribe', 'IndexController@subscribe')->name('subscribe');
+        Route::get('blog-detail/{id?}/{slug?}', 'IndexController@blog')->name('blog');
+        
+        Route::post('submit-apply-job', 'IndexController@submit_apply_job')->name('submit-apply-job');
+        Route::get('job-detail/{id?}', 'IndexController@job_detail')->name('job-detail');
+        // Route::get('/careers', 'IndexController@careers')->name('careers');
+        // Route::get('career_detail/{id?}/{slug?}', 'IndexController@career_detail')->name('career_detail');
+        // Route::get('/blogs', 'IndexController@blogs')->name('blogs');
+        // Route::get('/testimonials', 'IndexController@testimonials')->name('testimonials');
+        // Route::post  ('/contact_query', 'IndexController@contact_query')->name('contact_query');
     }
 );

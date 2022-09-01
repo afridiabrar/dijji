@@ -35,8 +35,6 @@
                         @csrf
                         @method('PUT')
 
-
-
                         <input type="hidden" id="career_id" name="id" value="{{ $data->id }}" />
                         <div class="form-group">
                             <label for="title" class="col-md-2 control-label">Title *</label>
@@ -52,7 +50,6 @@
                                     value="{{ old('slug', $data->slug) }}" class="form-control" />
                             </div>
                         </div> --}}
-
 
                         <div class="form-group">
                             <label for="last_name" class="col-md-2 control-label">Location *</label>
@@ -74,19 +71,20 @@
                                 <input type="text" id="experience" name="experience" maxlength="190"
                                     value="{{ old('experience', $data->experience) }}" class="form-control" />
                             </div>
-                        </div>  <div class="form-group">
+                        </div>
+                        <div class="form-group">
                             <label for="salary" class="col-md-2 control-label">Salary *</label>
                             <div class="col-md-4">
                                 <input type="text" id="salary" name="salary" maxlength="190"
                                     value="{{ old('salary', $data->salary) }}" class="form-control" />
                             </div>
                         </div>
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label for="content" class="col-md-2 control-label">Content</label>
                             <div class="col-md-8">
                                 <textarea name="content" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('content', $data->content) }}</textarea>
                             </div>
-                        </div> --}}
+                        </div>
 
                         {{-- <div class="form-group">
                             <label for="slug" class="col-md-2 control-label">Meta Title</label>

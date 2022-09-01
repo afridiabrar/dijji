@@ -98,6 +98,22 @@ class ViewComposerServiceProvider extends ServiceProvider
         });
 
         /*
+         * teams
+         */
+        view()->composer('admin.teams.index', function ($view) {
+            $view->with(['pageTitle' => 'Teams List']);
+        });
+        view()->composer('admin.teams.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Team']);
+        });
+        view()->composer('admin.teams.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Team']);
+        });
+        view()->composer('admin.teams.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Team']);
+        });
+
+         /*
          * blogs
          */
         view()->composer('admin.blogs.index', function ($view) {
@@ -159,6 +175,24 @@ class ViewComposerServiceProvider extends ServiceProvider
 
 
         /*
+         * BENEFITs
+         */
+        view()->composer('admin.benefits.index', function ($view) {
+            $view->with(['pageTitle' => 'Benefits List']);
+        });
+        view()->composer('admin.benefits.create', function ($view) {
+            $view->with(['pageTitle' => 'Add Benefit']);
+        });
+        view()->composer('admin.benefits.show', function ($view) {
+            $view->with(['pageTitle' => 'Show Benefit']);
+        });
+        view()->composer('admin.benefits.edit', function ($view) {
+            $view->with(['pageTitle' => 'Edit Benefit']);
+        });
+
+
+
+        /*
          * FAQs
          */
         view()->composer('admin.faqs.index', function ($view) {
@@ -174,10 +208,8 @@ class ViewComposerServiceProvider extends ServiceProvider
             $view->with(['pageTitle' => 'Edit Faq']);
         });
 
-
-
         /*
-         * FAQs
+         * Jobs List
          */
         view()->composer('admin.apply_jobs.index', function ($view) {
             $view->with(['pageTitle' => 'Apply Jobs List']);
@@ -210,6 +242,16 @@ class ViewComposerServiceProvider extends ServiceProvider
 
         view()->composer('admin.contact_queries.show', function ($view) {
             $view->with(['pageTitle' => 'Contact Show']);
+        });
+/*
+         * Tickets 
+         */
+        view()->composer('admin.tickets.index', function ($view) {
+            $view->with(['pageTitle' => 'Tickets']);
+        });
+
+        view()->composer('admin.tickets.show', function ($view) {
+            $view->with(['pageTitle' => 'Ticket Show']);
         });
 
         /*

@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img_box wow animate__animated animate__fadeInRight">
-                        <figure><img src="{{ frontimage('laptop.png') }}" class="img-fluid"></figure>
+                        <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media) }}" class="img-fluid"></figure>
                     </div>
                 </div>
             </div>
@@ -55,27 +55,26 @@
                 <h2>News and Blogs </h2>
             </div>
             <div class="all_blogs">
-                @for ($s = 0; $s < 10; $s++)
+                @foreach ($blogs as $blog)
                     <div class="blog_box">
                         <div class="video_box">
                             <div class="preview_img">
-                                <figure><img src="{{ frontimage('blog1.webp') }}" class="img-fluid"></figure>
+                                <figure><img src="{{ asset('uploads/blogs/' . $blog->media) }}" class="img-fluid">
+                                </figure>
                             </div>
 
                         </div>
                         <div class="content_box">
-                            <h4 class="title">Are digital receipts better for
-                                privacy?</h4>
+                            <h4 class="title">{{ $blog->title }}</h4>
                             <div class='blog_btn'>
-                                <h5 class="date">Apr 12, 2021</h5>
-                                <a href="https://www.receet.me/post/are-digital-receipts-better-for-privacy"
-                                    target=_blank>Read
+                                <h5 class="date">{{ $blog->created_at }}</h5>
+                                <a href="{{ url('/blog-detail', $blog->id, $blog->slug) }}" target=_blank>Read
                                     More</a>
                             </div>
 
                         </div>
                     </div>
-                @endfor
+                @endforeach
 
             </div>
         </div>
@@ -91,29 +90,22 @@
             </div>
             <div class="row">
                 <div class="col-md-2"></div>
-                @for ($s = 0; $s < 2; $s++)
+                @foreach ($teams as $team)
                     <div class="col-md-4">
                         <div class="team_box frst_box">
                             <div class="front_box">
                                 <div class="preview_box">
                                     <div class="img_box">
-                                        <figure><img src="{{ frontimage('team1.png') }}" class="img-fluid"></figure>
+                                        <figure><img src="{{ asset('uploads/teams/' . $team->media) }}" class="img-fluid">
+                                        </figure>
                                     </div>
                                     <div class="back_box">
-                                        <h5>
-                                            Victoria brings a wealth of experience from 10 years’ of working with FTSE100
-                                            corporates
-                                            to
-                                            small tech startups, digital platforms, bids and acquisitions, business
-                                            services,
-                                            and
-                                            consulting for early-stage businesses to power growth.
-                                        </h5>
+                                        {!! $team->content !!}
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4>Victoria Smallman</h4>
-                                    <h5>Founder and CEO</h5>
+                                    <h4>{{ $team->name }}</h4>
+                                    <h5>{{ $team->designation }}O</h5>
                                     <a href="https://www.linkedin.com/in/victoria-smallman-4a8b2033/" class="linkedin_sec">
                                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                                     </a>
@@ -121,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                @endfor
+                @endforeach
 
                 <div class="col-md-2"></div>
             </div>
@@ -172,8 +164,8 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="false" aria-controls="collapseOne">
                                         <h5>{{ $faq->question }}</h5>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </button>
@@ -245,7 +237,6 @@
                 @endforeach
             </div>
 
-
         </div>
     </section>
     <!-- FAQs Sec End Here -->
@@ -269,102 +260,19 @@
                         <figure><img src="{{ frontimage('person4.png') }}" class="img-fluid"></figure>
                     </div>
                     <div class="testimonial_slider">
-                        <div class="testi-slide">
+                        @foreach ($testimonials as $testimonial)
+                            <div class="testi-slide">
 
-                            <div class="client-review">
-                                <p>
-                                    The app sounds absolutely incredible
-                                </p>
+                                <div class="client-review">
+                                    {!! $testimonial->content !!}
+                                </div>
+                                <div class="client-details">
+                                    <h4>{{ $testimonial->name }}</h4>
+                                    <h5>{{ $testimonial->designation }}</h5>
+                                </div>
                             </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
+                        @endforeach
 
-                            <div class="client-review">
-                                <p>
-                                    Good to see companies taking the environment crisis seriously
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
-
-                            <div class="client-review">
-                                <p>
-                                    Great idea and I’m looking forward to it!
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
-
-                            <div class="client-review">
-                                <p>
-                                    It sounds very interesting and could make a real difference
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
-
-                            <div class="client-review">
-                                <p>
-                                    Great idea, very interested
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
-
-                            <div class="client-review">
-                                <p>
-                                    This is a great idea!
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
-
-                            <div class="client-review">
-                                <p>
-                                    This seems like a brilliant idea, can’t wait to start using it!
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
-                        <div class="testi-slide">
-
-                            <div class="client-review">
-                                <p>
-                                    I look forward to downloading
-                                </p>
-                            </div>
-                            <div class="client-details">
-                                <h4>Survey participant</h4>
-                                <h5>2021</h5>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -378,42 +286,47 @@
     </section>
     <!-- Testimonials Sec End Here -->
 
-    <!-- Landing Banner Sec Start Here -->
     <section class="landing_banner">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <div class="img_box wow animate__animated animate__fadeInUp">
-                        <figure><img src="{{ frontimage('landing12.jpg') }}" class="img-fluid"></figure>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="contentDv">
+        <div class="landing_banner_sec">
+            <div class="container-fluid">
 
-                        <p class="wow animate__animated animate__fadeInLeft animate__delay-1s">
-                            We’d love to welcome you to <span>Dijii</span> so subscribe, register as a
-                            beta-tester, or create an account to get regular updates and be one of the first
-                            to use Dijii!<br /><br>
-                            We’re looking for individuals and retailers to be part of our beta-testing team.<br /><br>
-                            For now, take a look at our app mockups – let us know if you like them and
-                            want to be part of our exciting journey!
-                        </p>
-                        <div class="download_from wow animate__animated animate__fadeInDown animate__delay-2s">
-                            <a href="#" data-toggle="modal" data-target="#appstore">
-                                <figure><img src="{{ frontimage('apple-btn.png') }}" class="img-fluid"></figure>
-                            </a>
-                            <a href="#" data-toggle="modal" data-target="#appstore">
-                                <figure><img src="{{ frontimage('google-btn.png') }}" class="img-fluid googleimg">
-                                </figure>
-                            </a>
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="img_box wow animate__animated animate__fadeInUp">
+                            <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media_2) }}" class="img-fluid">
+                            </figure>
                         </div>
-                        <div class="button-group wow animate__animated animate__fadeInUp animate__delay-3s">
-                            <a href="{{ url('/register-beta-tester') }}" class="diji-btn">Register As Tester</a>
-                            <a href="{{ url('/register-investor') }}" class="diji-btn scnd">Join Us</a>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="contentDv">
+
+                            {!! $cmsPage->content_2 !!}
+                            <div class="download_from wow animate__animated animate__fadeInDown animate__delay-2s">
+                                @if ($setting->playstore_link)
+                                    <a href="{{ $setting->playstore_link ? $setting->playstore_link : '' }}"
+                                        data-toggle="modal" data-target="#appstore">
+                                        <figure><img src="{{ frontimage('apple-btn.png') }}" class="img-fluid"></figure>
+                                    </a>
+                                @endif
+                                @if ($setting->appstore_link)
+                                    <a href="{{ $setting->appstore_link ? $setting->appstore_link : '' }}"
+                                        data-toggle="modal" data-target="#appstore">
+                                        <figure><img src="{{ frontimage('google-btn.png') }}"
+                                                class="img-fluid googleimg">
+                                        </figure>
+                                    </a>
+                                @endif
+
+                            </div>
+                            <div class="button-group wow animate__animated animate__fadeInUp animate__delay-3s">
+                                <a href="{{ url('/register-beta-tester') }}" class="diji-btn">Register As Tester</a>
+                                <a href="{{ url('/register-investor') }}" class="diji-btn scnd">Join Us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Landing Banner Sec End Here -->
@@ -432,11 +345,16 @@
                                 Dijii's development, get early access, find out about our launch,
                                 and receive relevant information about our exciting app!</p>
                         </div>
-                        <form action="">
+                        @include('admin.partials.errors')
+
+                        <form method="POST" action="{{ url('/subscribe') }}" class="form-horizontal" role="form"
+                            enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
                             <div class="form-group wow animate__animated animate__fadeInUp animate__delay-2s">
                                 <input type="email" placeholder="Enter your email address" class="form-control">
                                 <button class="diji-btn wow animate__animated animate__rubberBand animate__delay-3s"
-                                    type="button" data-toggle="modal" data-target="#subscript_modal">Subscribe</button>
+                                    type="submit">Subscribe</button>
                             </div>
                         </form>
                     </div>
@@ -466,7 +384,6 @@
         </div>
     </div>
     <!-- modal section end here -->
-
 
     <!-- modal sec start here -->
     <div class="modal fade" id="subscript_modal" tabindex="-1" role="dialog"

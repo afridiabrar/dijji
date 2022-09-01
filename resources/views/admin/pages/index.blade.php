@@ -63,9 +63,8 @@
                             @foreach ($records as $key => $record)
                                 <tr class="odd gradeX">
                                     <td>{!! $record->page_title !!}</td>
-                                    {{-- <td>{!! Str::words(strip_tags($record->content), 10) !!}</td> --}}
                                     <td>{!! $record->slug !!}</td>
-                                    <td>{!! strip_tags($record->content) !!}</td>
+                                    <td>{!! Str::words(strip_tags($record->content), 20) !!}</td>
 
                                     <td class="center text-center">
                                         <a href="{!! URL::route('admin.pages.show', $record->id) !!}" class="btn btn-xs blue" title="Show Record">
@@ -105,7 +104,7 @@
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="{!! URL::to('assets/admin/scripts/core/app.js') !!}"></script>
-    <script src="{!! URL::to('assets/admin/scripts/custom/pages.js') !!}"></script>
+    <script src="{!! URL::to('assets/admin/scripts/custom/blogs.js') !!}"></script>
     <script>
         jQuery(document).ready(function() {
             App.init();

@@ -36,22 +36,21 @@
                         @csrf
                         @method('PUT')
 
-
                         <div class="form-group">
                             <label for="name" class="col-md-2 control-label">Name *</label>
                             <div class="col-md-4">
                                 <input type="text" id="name" maxlength="190" name="name"
-                                    value="{{ old('question', $data->name) }}" class="form-control" />
+                                    value="{{ old('name', $data->name) }}" class="form-control" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="designation" class="col-md-2 control-label">Designation *</label>
+                            <label for="designation" class="col-md-2 control-label">Year *</label>
                             <div class="col-md-4">
                                 <input id="designation" type="text" name="designation" maxlength="190"
-                                    value="{{ old('question', $data->designation) }}" class="form-control" />
+                                    value="{{ old('Year', $data->designation) }}" class="form-control" />
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="logo" class="col-md-2 control-label">Images </label>
                             <div class="col-md-4">
                                 @if ($data->image != '' && file_exists(uploadsDir('testimonials/') . $data->image))
@@ -63,8 +62,8 @@
 
 
                             </div>
-                        </div>
-                        <div class="form-group">
+                        </div> --}}
+                        {{-- <div class="form-group">
                             <label for="last_name" class="col-md-2 control-label">Stars *</label>
                             <div class="col-md-4">
                                 <select class="form-control" name="stars">
@@ -86,7 +85,7 @@
                                     </option>
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label for="content" class="col-md-2 control-label">Content</label>
                             <div class="col-md-8">

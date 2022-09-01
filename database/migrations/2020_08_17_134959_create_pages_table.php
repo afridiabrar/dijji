@@ -15,12 +15,16 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->bigIncrements('id');
-//            $table->unsignedInteger('media_file_id')->default(0);
+            //            $table->unsignedInteger('media_file_id')->default(0);
             $table->string('page_title');
             $table->string('slug');
             $table->text('content')->nullable();
             $table->text('media')->nullable();
-            $table->text('our_vision')->nullable();
+            $table->text('video')->nullable();
+            $table->text('content_2')->nullable();
+            $table->text('media_2')->nullable();
+            $table->text('content_3')->nullable();
+            $table->text('media_3')->nullable();
             $table->text('page_name')->nullable();
             $table->string('meta_title')->nullable();
             $table->text('meta_keywords')->nullable();

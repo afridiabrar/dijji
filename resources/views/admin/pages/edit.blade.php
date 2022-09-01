@@ -35,7 +35,6 @@
                         @csrf
                         @method('PUT')
 
-
                         <input type="hidden" id="page_id" name="id" value="{{ $data->id }}" />
                         <div class="form-group">
                             <label for="page_title" class="col-md-2 control-label">Page Title *</label>
@@ -63,8 +62,73 @@
 
                             </div>
                         </div>
+                        @if ($data->id == 1)
+                            <div class="form-group">
+                                <label for="Video" class="col-md-2 control-label">Video </label>
+                                <div class="col-md-4">
+                                    @if ($data->Video != '' && file_exists(uploadsDir('pages/') . $data->Video))
+                                        <video src="{!! asset('uploads/pages/' . $data->video) !!}"></video>
+                                    @endif
 
+                                    <input type="file" name="Video" class="form-control" />
 
+                                </div>
+                            </div>
+                        @endif
+                        <div class="form-group">
+                            <label for="content_2" class="col-md-2 control-label">2 Section Content</label>
+                            <div class="col-md-8">
+                                <textarea name="content_2" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('content', $data->content_2) }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="media_2" class="col-md-2 control-label">2 Section Media </label>
+                            <div class="col-md-4">
+                                @if ($data->media_2 != '' && file_exists(uploadsDir('pages/') . $data->media_2))
+                                    <img src="{!! asset('uploads/pages/' . $data->media_2) !!}" alt="{!! $data->title !!}"
+                                        title="{!! $data->title !!}" style="width: 100px;" />
+                                @endif
+
+                                <input type="file" name="media_2" class="form-control" />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="content_3" class="col-md-2 control-label">3 Section Content</label>
+                            <div class="col-md-8">
+                                <textarea name="content_3" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('content', $data->content_3) }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="media_3" class="col-md-2 control-label">3 Section Media </label>
+                            <div class="col-md-4">
+                                @if ($data->media_3 != '' && file_exists(uploadsDir('pages/') . $data->media_3))
+                                    <img src="{!! asset('uploads/pages/' . $data->media_3) !!}" alt="{!! $data->title !!}"
+                                        title="{!! $data->title !!}" style="width: 100px;" />
+                                @endif
+
+                                <input type="file" name="media_3" class="form-control" />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="content_4" class="col-md-2 control-label">3 Section Content</label>
+                            <div class="col-md-8">
+                                <textarea name="content_4" class="form-control ckeditor" maxlength="65000" rows="3">{{ old('content', $data->content_4) }}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="media_4" class="col-md-2 control-label">3 Section Media </label>
+                            <div class="col-md-4">
+                                @if ($data->media_4 != '' && file_exists(uploadsDir('pages/') . $data->media_4))
+                                    <img src="{!! asset('uploads/pages/' . $data->media_4) !!}" alt="{!! $data->title !!}"
+                                        title="{!! $data->title !!}" style="width: 100px;" />
+                                @endif
+
+                                <input type="file" name="media_4" class="form-control" />
+
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="slug" class="col-md-2 control-label">Meta Title</label>
                             <div class="col-md-8">

@@ -72,8 +72,7 @@
                                         <td><img src="{!! asset('uploads/blogs/' . $record->media) !!}" alt="{!! $record->title !!}"
                                                 title="{!! $record->title !!}" style="width: 100px;" /></td>
                                     @else
-                                        <td><img src="{!! asset('uploads/blogs/no-image.jpg') !!}"
-                                                alt="{!! $record->title !!}"style="width: 100px;" /></td>
+                                        <td></td>
                                     @endif
                                     <td>{!! $record->status
                                         ? '<h6 class="alert alert-success">Active</h6>'

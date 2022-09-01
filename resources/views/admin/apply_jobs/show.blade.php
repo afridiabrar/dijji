@@ -33,15 +33,16 @@
 
                     <div class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>First Name:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>Job:</strong> </label>
                             <div class="col-md-8">
-                                <label class="control-label">{{ $data->f_name }}</label>
+                                <label class="control-label"><a
+                                        href="{!! URL::route('admin.careers.show', $data->job_id) !!}">{{ $data->career->title }}</a></label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>Last Name:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>Full Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="control-label">{{ $data->l_name }}</label>
+                                <label class="control-label">{{ $data->fullname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -56,12 +57,12 @@
                                 <label class="control-label">{{ $data->phone }}</label>
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Message:</strong> </label>
                             <div class="col-md-8">
                                 <label class="control-label">{{ $data->msg }}</label>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Resume:</strong> </label>
                             <div class="col-md-8">

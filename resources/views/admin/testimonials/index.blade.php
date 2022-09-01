@@ -55,9 +55,9 @@
                         <thead>
                             <tr>
                                 <th>Name</th>
-                                <th>Designation</th>
-                                <th>Image</th>
-                                <th>Star</th>
+                                <th>Year</th>
+                                {{-- <th>Image</th> --}}
+                                {{-- <th>Star</th> --}}
                                 <th>Status</th>
 
                                 <th class="text-center">Actions</th>
@@ -68,15 +68,17 @@
                                 <tr class="odd gradeX">
                                     <td>{!! $record->name !!}</td>
                                     <td>{!! $record->designation !!}</td>
-                                    @if ($record->image != '' && file_exists(uploadsDir('testimonials/') . $record->image))
+                                    {{-- @if ($record->image != '' && file_exists(uploadsDir('testimonials/') . $record->image))
                                         <td><img src="{!! asset('uploads/testimonials/' . $record->image) !!}" alt="{!! $record->title !!}"
                                                 title="{!! $record->title !!}" style="width: 100px;" /></td>
                                     @else
                                         <td><img src="{!! asset('uploads/testimonials/no-image.jpg') !!}"
                                                 alt="{!! $record->title !!}"style="width: 100px;" /></td>
-                                    @endif
-                                    <td>{!! $record->stars !!} Stars</td>
-                                    <td>{!! $record->status ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
+                                    @endif --}}
+                                    {{-- <td>{!! $record->stars !!} Stars</td> --}}
+                                    <td>{!! $record->status
+                                        ? '<h6 class="alert alert-success">Active</h6>'
+                                        : '<h6 class="alert alert-danger">Deactive</h6>' !!}</td>
 
                                     <td class="center text-ce
                                 nter">

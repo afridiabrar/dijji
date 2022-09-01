@@ -16,11 +16,9 @@ class CreateApplyJobsTable extends Migration
         Schema::create('apply_jobs', function (Blueprint $table) {
             $table->id();
             $table->integer('job_id');
-            $table->string('f_name');
-            $table->string('l_name');
+            $table->string('fullname');
             $table->string('email');
             $table->string('phone');
-            $table->string('msg');
             $table->string('media');
             $table->timestamps();
         });

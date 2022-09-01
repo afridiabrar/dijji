@@ -141,6 +141,26 @@ class PagesController extends Controller
                 $getImage = $this->image_upload($file);
                 $data['media'] = $getImage;
             }
+            if ($request->hasFile('video')) {
+                $file = $request->file('video');
+                $getImage = $this->image_upload($file);
+                $data['video'] = $getImage;
+            }
+            if ($request->hasFile('media_2')) {
+                $file = $request->file('media_2');
+                $getImage = $this->image_upload($file);
+                $data['media_2'] = $getImage;
+            }
+            if ($request->hasFile('media_3')) {
+                $file = $request->file('media_3');
+                $getImage = $this->image_upload($file);
+                $data['media_3'] = $getImage;
+            }
+            if ($request->hasFile('media_4')) {
+                $file = $request->file('media_4');
+                $getImage = $this->image_upload($file);
+                $data['media_4'] = $getImage;
+            }
             Page::where('id', $id)->update($data);
 
             return redirect()

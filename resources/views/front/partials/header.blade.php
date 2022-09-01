@@ -28,16 +28,20 @@
             <div class="col-md-5 col-8">
                 <div class="right_content">
                     <div class="download_from">
-                        <div class="plystore">
-                            <a href="#">
-                                <figure><img src="{{ frontimage('playstore.png') }}" class="img-fluid"></figure>
-                            </a>
-                        </div>
-                        <div class="apple">
-                            <a href="#">
-                                <figure><img src="{{ frontimage('apple.png') }}" class="img-fluid"></figure>
-                            </a>
-                        </div>
+                        @if ($setting->playstore_link)
+                            <div class="plystore">
+                                <a href="{{ $setting->playstore_link ? $setting->playstore_link : '' }}">
+                                    <figure><img src="{{ frontimage('playstore.png') }}" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        @endif
+                        @if ($setting->appstore_link)
+                            <div class="apple">
+                                <a href="{{ $setting->appstore_link ? $setting->appstore_link : '' }}">
+                                    <figure><img src="{{ frontimage('apple.png') }}" class="img-fluid"></figure>
+                                </a>
+                            </div>
+                        @endif
                     </div>
                     <div class="button-group">
 
@@ -93,8 +97,17 @@
         <li class="menu_items"><a class="menu_links" href="{{ url('/contact') }}">Contact Us</a></li>
         <li class="menu_items"><a class="menu_links" href="#">Register as tester</a></li>
         <li class="menu_items"><a class="menu_links" href="{{ url('/login') }}">Login</a></li>
-        <li class="menu_items"><a class="menu_links" href="#">Download from Playstore</a></li>
-        <li class="menu_items"><a class="menu_links" href="#">Download from Applestore</a></li>
+
+        @if ($setting->playstore_link)
+            <li class="menu_items"><a class="menu_links"
+                    href="{{ $setting->playstore_link ? $setting->playstore_link : '' }}">Download from Playstore</a>
+            </li>
+        @endif
+        @if ($setting->appstore_link)
+            <li class="menu_items"><a class="menu_links"
+                    href="{{ $setting->appstore_link ? $setting->appstore_link : '' }}">Download from Applestore</a>
+            </li>
+        @endif
     </ul>
 </div>
 <!-- Mobile Header End Here -->

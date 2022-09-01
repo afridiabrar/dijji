@@ -39,12 +39,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>Designation:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>Year:</strong> </label>
                             <div class="col-md-8">
                                 <label class="control-label">{{ $data->designation }}</label>
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Image:</strong> </label>
                             <div class="col-md-8">
                                 @if ($data->image != '' && file_exists(uploadsDir('testimonials/') . $data->image))
@@ -53,13 +53,13 @@
                                 @endif
 
                             </div>
-                        </div>
-                        <div class="form-group">
+                        </div> --}}
+                        {{-- <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Stars:</strong> </label>
                             <div class="col-md-8">
                                 <label class="control-label">{{ $data->stars }} Stars</label>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Content:</strong> </label>
                             <div class="col-md-8">
@@ -69,7 +69,9 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Status:</strong> </label>
                             <div class="col-md-8">
-                               {!! $data->status ? '<h6 class="alert alert-success">Active</h6>' : '<h6 class="alert alert-danger">Deactive</h6>' !!}
+                                {!! $data->status
+                                    ? '<h6 class="alert alert-success">Active</h6>'
+                                    : '<h6 class="alert alert-danger">Deactive</h6>' !!}
 
                             </div>
                         </div>

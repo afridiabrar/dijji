@@ -91,8 +91,8 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="text-center">
-                                            <a href="" class="btn" data-toggle="modal"
-                                                data-target="#exampleModalCenter">Apply</a>
+                                            <a href="{{ url('/job-detail', $career->id) }}" class="btn"
+                                                {{-- data-toggle="modal" data-target="#exampleModalCenter" --}}>Apply</a>
                                         </div>
                                     </div>
                                 </div>
@@ -123,19 +123,24 @@
                                 <div>
                                     <p class="aftj">Apply For This Job</p>
                                 </div>
-                                <form action="">
+
+                                <form method="POST" action="{{ url('/submit-apply-job') }}" class="form-horizontal"
+                                    role="form" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('POST')
                                     <div class="form-group mt-4">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
-                                                <input type="text" class="form-control" id="inputPass" name="inputPass"
-                                                    placeholder="Full name" required="password">
+                                                <input type="hidden" name="job_id" value="">
+                                                <input type="text" class="form-control" id="inputPass" name="fullname"
+                                                    placeholder="Full name" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group mt-4">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
-                                                <input type="email" class="form-control" id="inputemail" name="inputemail"
+                                                <input type="email" class="form-control" id="inputemail" name="email"
                                                     placeholder="Email Address" required>
                                             </div>
                                         </div>
@@ -143,8 +148,8 @@
                                     <div class="form-group mt-4">
                                         <div class="row">
                                             <div class="col-md-12 col-xs-12">
-                                                <input type="tel" class="form-control" id="inputPno"
-                                                    name="inpuinputPnotPass" placeholder="Phone Number" required>
+                                                <input type="tel" class="form-control" id="inputPno" name="phone"
+                                                    placeholder="Phone Number" required>
                                             </div>
                                         </div>
                                     </div>
@@ -152,7 +157,7 @@
                                         <div class=" col-md-6 col-xs-6">
                                             <div class="avatar-edit">
                                                 <label for="imageUpload">Upload Your CV</label>
-                                                <input type="file" id="imageUpload">
+                                                <input type="file" name="media" id="imageUpload">
                                             </div>
                                         </div>
                                         <div class="contactus-form-btn col-md-6 col-xs-6 text-right">

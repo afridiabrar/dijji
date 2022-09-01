@@ -4,9 +4,7 @@
     <!-- ticker section start here -->
     <section class="ticker_sec">
         <div>
-            <marquee behavior="" direction=""> Are you fed up of outdated, toxic paper receipts and want a quick and easy
-                digital solution?
-                Introducing Dijii. The digital receipt app you just need to tap!<a type="" class="btn marquea"
+            <marquee behavior="" direction=""> {{ $cmsPage->content }}<a type="" class="btn marquea"
                     href="#newsletters">Subscribe</a></marquee>
         </div>
     </section>
@@ -15,7 +13,8 @@
     <section class="banner_sec">
         <div class="container">
             <div class="center-mobile wow animate__animated animate__bounceIn">
-                <figure><img src="{{ frontimage('bannerPhone4.png') }}" data-speed="-5" class="layer img-fluid"></figure>
+                <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media) }}" data-speed="-5" class="layer img-fluid">
+                </figure>
             </div>
             <div class="go-to-bottom">
                 <a href="#scnd-sec">
@@ -25,9 +24,6 @@
         </div>
     </section>
     <!-- Banner Sec End Here -->
-
-
-
 
     <!-- Second Sec Start Here -->
     <section class="second_sec" id="scnd-sec">
@@ -95,7 +91,7 @@
                 <div class="preview_img">
 
                     <video width="100%" autoplay playsinline loop poster="http://placehold.it/350x350">
-                        <source src="{{ frontimage('homevid.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('uploads/pages/' . $cmsPage->video) }}" type="video/mp4">
                     </video>
                 </div>
 
@@ -119,66 +115,20 @@
                             <h4>For Customers</h4>
                         </div>
                         <ul class="points">
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Save Money and Redeem Rewards</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>with personalised discounts, offers and rewards</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">A Greener Future</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>is Within Our Grasp the eco-friendly choice that supports charities</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Maintain your privacy </span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>keep your email address private</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Simplicity and Convenience</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>with just one tappable app</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Feel in Control of Your Spending</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>with budget and spending analysis</p>
-                                </details>
-                                </p>
-                            </li>
+                            @foreach ($customers as $customer)
+                                <li>
+                                    <img src="{{ frontimage('checked.png') }}" class="img-fluid">
+                                    <p>
+                                    <details>
+                                        <summary>
+                                            <span class="bld">{{ $customer->point }}</span>
+                                            <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
+                                        </summary>
+                                        {!! $customer->detail !!}
+                                    </details>
+                                    </p>
+                                </li>
+                            @endforeach
 
                         </ul>
                         <div class="button-group">
@@ -199,67 +149,20 @@
                             <h4>For Retailers</h4>
                         </div>
                         <ul class="points">
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">High Return on Investment</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>Increase sales, improve brand
-                                        awareness, and raise engagement</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Reduce costs</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>Reduce operational and consumables costs by going digital</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Connect with Your Customers</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>Directly engage your customers</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">Personalised Marketing</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>For the individual, not a customer segment</p>
-                                </details>
-                                </p>
-                            </li>
-                            <li>
-                                <img src="{{ frontimage('checked.png') }}" class="img-fluid">
-                                <p>
-                                <details>
-                                    <summary>
-                                        <span class="bld">A Better Checkout</span>
-                                        <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
-                                    </summary>
-                                    <p>A quicker, simpler, safer checkout experience with a single contactless tap</p>
-                                </details>
-                                </p>
-                            </li>
+                            @foreach ($retailers as $retailer)
+                                <li>
+                                    <img src="{{ frontimage('checked.png') }}" class="img-fluid">
+                                    <p>
+                                    <details>
+                                        <summary>
+                                            <span class="bld">{{ $retailer->point }}</span>
+                                            <img src="{{ frontimage('shareicon.png') }}" class="img-fluid" alt="">
+                                        </summary>
+                                        {!! $retailer->detail !!}
+                                    </details>
+                                    </p>
+                                </li>
+                            @endforeach
 
                         </ul>
                         <div class="button-group">
@@ -273,7 +176,6 @@
     </section>
     <!-- Benefits Sec End Here -->
 
-
     <!-- Landing Banner Sec Start Here -->
     <section class="landing_banner">
         <div class="landing_banner_sec">
@@ -282,28 +184,30 @@
                 <div class="row align-items-center">
                     <div class="col-md-7">
                         <div class="img_box wow animate__animated animate__fadeInUp">
-                            <figure><img src="{{ frontimage('landing12.jpg') }}" class="img-fluid"></figure>
+                            <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media_2) }}" class="img-fluid">
+                            </figure>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="contentDv">
 
-                            <p class="wow animate__animated animate__fadeInLeft animate__delay-1s">
-                                We’d love to welcome you to <span>Dijii</span> so subscribe, register as a
-                                beta-tester, or create an account to get regular updates and be one of the first
-                                to use Dijii!<br /><br>
-                                We’re looking for individuals and retailers to be part of our beta-testing team.<br /><br>
-                                For now, take a look at our app mockups – let us know if you like them and
-                                want to be part of our exciting journey!
-                            </p>
+                            {!! $cmsPage->content_2 !!}
                             <div class="download_from wow animate__animated animate__fadeInDown animate__delay-2s">
-                                <a href="#" data-toggle="modal" data-target="#appstore">
-                                    <figure><img src="{{ frontimage('apple-btn.png') }}" class="img-fluid"></figure>
-                                </a>
-                                <a href="#" data-toggle="modal" data-target="#appstore">
-                                    <figure><img src="{{ frontimage('google-btn.png') }}" class="img-fluid googleimg">
-                                    </figure>
-                                </a>
+                                @if ($setting->playstore_link)
+                                    <a href="{{ $setting->playstore_link ? $setting->playstore_link : '' }}"
+                                        data-toggle="modal" data-target="#appstore">
+                                        <figure><img src="{{ frontimage('apple-btn.png') }}" class="img-fluid"></figure>
+                                    </a>
+                                @endif
+                                @if ($setting->appstore_link)
+                                    <a href="{{ $setting->appstore_link ? $setting->appstore_link : '' }}"
+                                        data-toggle="modal" data-target="#appstore">
+                                        <figure><img src="{{ frontimage('google-btn.png') }}"
+                                                class="img-fluid googleimg">
+                                        </figure>
+                                    </a>
+                                @endif
+
                             </div>
                             <div class="button-group wow animate__animated animate__fadeInUp animate__delay-3s">
                                 <a href="{{ url('/register-beta-tester') }}" class="diji-btn">Register As Tester</a>
@@ -332,11 +236,17 @@
                                 Dijii's development, get early access, find out about our launch,
                                 and receive relevant information about our exciting app!</p>
                         </div>
-                        <form action="">
+                        @include('admin.partials.errors')
+
+                        <form method="POST" action="{{ url('/subscribe') }}" class="form-horizontal" role="form"
+                            enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
                             <div class="form-group wow animate__animated animate__fadeInUp animate__delay-2s">
-                                <input type="email" placeholder="Enter your email address" class="form-control">
+                                <input type="email" name="email" placeholder="Enter your email address"
+                                    class="form-control">
                                 <button class="diji-btn wow animate__animated animate__rubberBand animate__delay-3s"
-                                    type="button" data-toggle="modal" data-target="#subscript_modal">Subscribe</button>
+                                    type="submit">Subscribe</button>
                             </div>
                         </form>
                     </div>

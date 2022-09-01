@@ -25,9 +25,8 @@ class StoreTestimonialsRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'image' => 'required',
+            // 'image' => 'required',
             'designation' => 'required',
-            'stars' => 'required',
             'content' => 'required',
         ];
     }

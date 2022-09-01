@@ -54,8 +54,8 @@
                     <table class="table table-striped table-bordered table-hover" id="sample_1">
                         <thead>
                             <tr>
+                                <th>Job</th>
                                 <th>First Name</th>
-                                <th>Last Name</th>
                                 <th>email</th>
                                 <th>Phone</th>
                                 <th class="text-center">Actions</th>
@@ -64,8 +64,8 @@
                         <tbody>
                             @foreach ($records as $key => $record)
                                 <tr class="odd gradeX">
-                                    <td>{!! $record->f_name !!}</td>
-                                    <td>{!! $record->l_name !!}</td>
+                                    <td><a href="{!! URL::route('admin.careers.show', $record->job_id) !!}">{{ $record->career->title }}</a></td>
+                                    <td>{!! $record->fullname !!}</td>
                                     <td>{!! $record->email !!}</td>
                                     <td>{!! $record->phone !!}</td>
                                     <td class="center text-center">

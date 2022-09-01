@@ -30,8 +30,8 @@
                 <div class="portlet-body">
 
                     <h4>&nbsp;</h4>
-                    <form method="POST" action="{{ route('admin.careers.store') }}" class="form-horizontal"
-                        role="form" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('admin.careers.store') }}" class="form-horizontal" role="form"
+                        enctype="multipart/form-data">
                         @csrf
                         @method('POST')
 
@@ -75,12 +75,12 @@
                                 </select>
                             </div>
                         </div>
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label for="content" class="col-md-2 control-label">Job Description</label>
                             <div class="col-md-8">
                                 <textarea name="content" class="form-control ckeditor" maxlength="65000">{{ old('content') }}</textarea>
                             </div>
-                        </div> --}}
+                        </div>
                         {{-- <div class="form-group">
                             <label for="slug" class="col-md-2 control-label">Meta Title *</label>
                             <div class="col-md-8">

@@ -28,6 +28,9 @@ class CreateSiteSettingsTable extends Migration
             $table->string('tiktok')->nullable();
             $table->string('youtube')->nullable();
             $table->string('linkedin')->nullable();
+            $table->string('pinterest')->nullable();
+            $table->string('playstore_link')->nullable();
+            $table->string('appstore_link')->nullable();
             $table->text('footer_scripts')->nullable();
             $table->text('footer_sentence')->nullable();
             $table->text('copyright')->nullable();

@@ -23,7 +23,7 @@ class ApplyJobController extends Controller
     public function index()
     {
         try {
-            $records = Apply_jobs::all();
+            $records = Apply_jobs::with('career')->get();
             return view('admin.apply_jobs.index', compact('records'));
         } catch (\Exception $exception) {
             return redirect()

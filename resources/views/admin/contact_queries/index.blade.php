@@ -38,9 +38,9 @@
                     <table class="table table-striped table-bordered table-hover" id="sample_1">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                                 <th>Email</th>
-                                <th>Organization</th>
                                 <th>Phone</th>
                                 <th>Message</th>
                                 <th>Created At</th>
@@ -48,10 +48,11 @@
                             </tr>
                         </thead>
                         <tbody>
+
                             @foreach ($records as $key => $record)
                                 <tr class="odd gradeX">
-                                    <td>{!! $record->name !!}</td>
-                                    <td>{!! $record->organization !!}</td>
+                                    <td>{!! $record->fname !!}</td>
+                                    <td>{!! $record->lname !!}</td>
                                     <td>{!! $record->email !!}</td>
                                     <td>{!! $record->phone !!}</td>
                                     <td>{!! $record->message !!}</td>
