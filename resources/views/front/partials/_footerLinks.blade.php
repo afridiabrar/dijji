@@ -15,6 +15,8 @@
 <script src="{{ frontSlick('slick.min.js') }}"></script>
 <!-- Slick Slider CDN -->
 
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
 <!-- Wow Js CDN -->
 <script src="{{ frontjs('wow.min.js') }}"></script>
 <script>
@@ -72,7 +74,7 @@
 </script>
 
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
     (function() {
@@ -84,7 +86,7 @@
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
     })();
-</script>
+</script> --}}
 <!--End of Tawk.to Script-->
 <!-- backtotop start-->
 <script>
@@ -133,4 +135,6 @@
     });
 </script>
 
+<df-messenger intent="WELCOME" chat-title="Dijji-Bot" agent-id="9fad1eda-c9cb-4e34-a5bd-02aff88263ae" language-code="en"
+    chat-icon="https://t3.ftcdn.net/jpg/03/22/38/32/360_F_322383277_xcXz1I9vOFtdk7plhsRQyjODj08iNSwB.jpg"></df-messenger>
 <!-- backtotop end-->
