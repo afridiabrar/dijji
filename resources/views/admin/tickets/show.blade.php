@@ -31,15 +31,15 @@
                     <h4>&nbsp;</h4>
                     <div class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>Name:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>First Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="col-md-8 control-label text-align-left">{{ $data->name }}</label>
+                                <label class="col-md-8 control-label text-align-left">{{ $data->fname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>Organization:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>Last Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="col-md-8 control-label text-align-left">{{ $data->organization }}</label>
+                                <label class="col-md-8 control-label text-align-left">{{ $data->lname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -57,12 +57,52 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="col-md-2 control-label"><strong>Postcode #:</strong> </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left">{{ $data->postcode }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><strong>Company Name :</strong> </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left">{{ $data->company_name }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><strong>Number Of Stores #:</strong> </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left">{{ $data->no_store }}</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Message:</strong> </label>
                             <div class="col-md-8">
                                 <label class="col-md-8 control-label text-align-left">{{ $data->message }}</label>
                             </div>
                         </div>
-
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><strong> Dijii may keep me informed about its services
+                                    :</strong> </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left">
+                                    {!! $data->check1 ? '<h6 class="alert alert-success">Yes</h6>' : '<h6 class="alert alert-danger">No</h6>' !!}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><strong>I am a potential investor :</strong> </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left"> {!! $data->check2 ? '<h6 class="alert alert-success">Yes</h6>' : '<h6 class="alert alert-danger">No</h6>' !!}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><strong>I am a retailer or other business :</strong>
+                            </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left"> {!! $data->check3 ? '<h6 class="alert alert-success">Yes</h6>' : '<h6 class="alert alert-danger">No</h6>' !!}</label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10"></div>
                         </div>

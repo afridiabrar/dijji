@@ -79,15 +79,15 @@
                                     Policy*</label>
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="1check" id="scnd-check" value="1" class="form-control">
+                                <input type="checkbox" name="check1" id="scnd-check" value="1" class="form-control">
                                 <label for="scnd-check">Dijii may keep me informed about its services</label>
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="2check" id="thrd-check" value="1" class="form-control">
+                                <input type="checkbox" name="check2" id="thrd-check" value="1" class="form-control">
                                 <label for="thrd-check">I am a potential investor</label>
                             </div>
                             <div class="form-group">
-                                <input type="checkbox" name="3check" id="frth-check" value="1" class="form-control">
+                                <input type="checkbox" name="check3" id="frth-check" value="1" class="form-control">
                                 <label for="frth-check">I am a retailer or other business</label>
                             </div>
                         </div>
@@ -112,8 +112,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                Launch demo modal
-                                                            </button> -->
+                                                                    Launch demo modal
+                                                                </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">

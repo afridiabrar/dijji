@@ -23,9 +23,9 @@ class CreateTicketsTable extends Migration
             $table->string('company_name', 32);
             $table->string('no_store', 32);
             $table->integer('term_condition');
-            $table->integer('1check');
-            $table->integer('2check');
-            $table->integer('3check');
+            $table->integer('check1');
+            $table->integer('check2');
+            $table->integer('check3');
             $table->text('message');
             $table->boolean('is_read')->default(0);
             $table->timestamps();

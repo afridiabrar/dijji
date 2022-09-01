@@ -67,7 +67,7 @@ class TicketsController extends Controller
 
             if ($data) {
                 Tickets::where('id', $id)->update(['is_read' => 1]);
-                return view('admin.contact_queries.show', compact('data'));
+                return view('admin.tickets.show', compact('data'));
             }
 
             abort(404);
