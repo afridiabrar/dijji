@@ -9,12 +9,9 @@
   --second-color: #4270ec;
 }
 
-.title-wrapper {
-  background-color: #0cecbf !important;
-}
+df-messenger {
+  --df-messenger-button-titlebar-color: #df9b56;
 
-button#widgetIcon {
-  background: #0cecbf !important;
 }
 
 html {
