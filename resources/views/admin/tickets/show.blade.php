@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <!-- BEGIN PAGE TITLE & BREADCRUMB-->
             <h3 class="page-title">{{ $pageTitle }} <small></small></h3>
-            {{ Breadcrumbs::render('admin.contact-queries.show', $data) }}
+            {{ Breadcrumbs::render('admin.tickets.show', $data) }}
             <!-- END PAGE TITLE & BREADCRUMB-->
         </div>
     </div>
@@ -30,6 +30,12 @@
                 <div class="portlet-body">
                     <h4>&nbsp;</h4>
                     <div class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><strong>Ticket no#:</strong> </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left">dt#{{ $data->id }}</label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>First Name:</strong> </label>
                             <div class="col-md-8">
