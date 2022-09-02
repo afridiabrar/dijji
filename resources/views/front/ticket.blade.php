@@ -23,7 +23,7 @@
             @include('admin.partials.errors')
 
             <form method="POST" action="{{ url('/submit_ticket') }}" class="form-horizontal" role="form"
-                enctype="multipart/form-data">
+                enctype="multipart/form-data" onsubmit="check_if_capcha_is_filled">
                 @csrf
                 @method('POST')
                 <div class="row">
@@ -95,7 +95,8 @@
                     <div class="col-md-6">
                         <div class="action_group">
                             <div class="recaptcha">
-                                <div class="g-recaptcha" data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
+                                <div id="g-recaptcha-response" class="g-recaptcha"
+                                    data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
                             </div>
                             <div class="button-group">
                                 <button class="btn" type="submit">Submit</button>
@@ -112,8 +113,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                        Launch demo modal
-                                                                    </button> -->
+                                                                                                        Launch demo modal
+                                                                                                    </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
@@ -133,4 +134,16 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        $("form").submit(function(event) {
+
+            var recaptcha = $("#g-recaptcha-response").val();
+            if (recaptcha === "") {
+                event.preventDefault();
+                alert("Please check the recaptcha");
+            }
+        });
+    </script>
 @endsection

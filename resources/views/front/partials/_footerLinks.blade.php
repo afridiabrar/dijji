@@ -139,3 +139,4 @@
 <df-messenger intent="WELCOME" chat-title="Diji-Bot" agent-id="9fad1eda-c9cb-4e34-a5bd-02aff88263ae" language-code="en"
     chat-icon="https://t3.ftcdn.net/jpg/03/22/38/32/360_F_322383277_xcXz1I9vOFtdk7plhsRQyjODj08iNSwB.jpg"></df-messenger>
 <!-- backtotop end-->
+@yield('js')

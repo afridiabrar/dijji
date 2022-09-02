@@ -53,9 +53,13 @@
                             <textarea placeholder="Your message here" name="message" class="form-control"></textarea>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="action_group">
+                    <div class="col-md-12">
 
+                        <div class="action_group">
+                            <div class="recaptcha">
+                                <div id="g-recaptcha-response" class="g-recaptcha"
+                                    data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
+                            </div>
                             <div class="button-group">
                                 <button class="btn" type="submit">Submit</button>
                             </div>
@@ -71,8 +75,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                        Launch demo modal
-                                                                    </button> -->
+                                                                                    Launch demo modal
+                                                                                </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
@@ -92,4 +96,16 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    <script>
+        $("form").submit(function(event) {
+
+            var recaptcha = $("#g-recaptcha-response").val();
+            if (recaptcha === "") {
+                event.preventDefault();
+                alert("Please check the recaptcha");
+            }
+        });
+    </script>
 @endsection

@@ -31,15 +31,15 @@
                     <h4>&nbsp;</h4>
                     <div class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>Name:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>First Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="col-md-8 control-label text-align-left">{{ $data->name }}</label>
+                                <label class="col-md-8 control-label text-align-left">{{ $data->fname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2 control-label"><strong>Organization:</strong> </label>
+                            <label class="col-md-2 control-label"><strong>Last Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="col-md-8 control-label text-align-left">{{ $data->organization }}</label>
+                                <label class="col-md-8 control-label text-align-left">{{ $data->lname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -56,13 +56,14 @@
                             </div>
                         </div>
 
+
+
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Message:</strong> </label>
                             <div class="col-md-8">
                                 <label class="col-md-8 control-label text-align-left">{{ $data->message }}</label>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10"></div>
                         </div>

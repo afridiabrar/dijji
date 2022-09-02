@@ -103,6 +103,37 @@
                                 <label class="col-md-8 control-label text-align-left"> {!! $data->check3 ? '<h6 class="alert alert-success">Yes</h6>' : '<h6 class="alert alert-danger">No</h6>' !!}</label>
                             </div>
                         </div>
+
+                        @if ($data->reply)
+                            <label class="col-md-2 control-label"><strong>Reply</strong>
+                            </label>
+                            <div class="col-md-8">
+                                <label class="col-md-8 control-label text-align-left"> {!! $data->reply !!}</label>
+                            </div>
+                        @else
+                            <form method="POST" action="{{ route('admin.tickets.update', $data->id) }}"
+                                class="form-horizontal" role="form" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+
+                                <div class="form-group">
+                                    <label for="reply" class="col-md-2 control-label">Reply *</label>
+                                    <div class="col-md-8">
+                                        <textarea name="reply" class="form-control ckeditor" maxlength="65000">{{ old('answer') }}</textarea>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10">
+                                        <input type="submit" class="btn blue" id="save" value="Save">
+                                    </div>
+                                </div>
+                            </form>
+                        @endif
+
+
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10"></div>
                         </div>
@@ -125,6 +156,7 @@
 @stop
 
 @section('footer-js')
+    <script type="text/javascript" src="{!! URL::to('assets/admin/plugins/ckeditor/ckeditor.js') !!}"></script>
     <script src="{!! URL::to('assets/admin/scripts/core/app.js') !!}"></script>
     <script>
         jQuery(document).ready(function() {

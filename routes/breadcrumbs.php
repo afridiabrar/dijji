@@ -224,7 +224,7 @@ Breadcrumbs::for('admin.tickets.index', function ($breadcrumbs) {
 // Ticket > Show
 Breadcrumbs::for('admin.tickets.show', function ($breadcrumbs, $data) {
     $breadcrumbs->parent('admin.tickets.index');
-    $breadcrumbs->push($data->first_name . ' ' . $data->last_name, route('admin.tickets.show', $data->id));
+    $breadcrumbs->push('Ticket no dt#' . $data->id, route('admin.tickets.show', $data->id));
 });
 /*
 |--------------------------------------------------------------------------

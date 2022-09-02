@@ -13,6 +13,7 @@
     @include('front.partials.footer')
 
     @include('front.partials._footerLinks')
+
 </body>
 
 </html>

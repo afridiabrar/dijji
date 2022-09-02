@@ -172,7 +172,7 @@ public function job_detail(Request $request, $id)
             // dispatch(new \App\Jobs\SendContactFormEmailJob($request->all()));
 
             return redirect()->back()
-                ->with('success', 'Ticket has been submit successfully.Your Ticket No is # dt1000' . $req->id);
+                ->with('success', 'TTicket has been submitted successfully. Your Ticket no is #dt' . $req->id);
         } else {
             return redirect()->back()
                 ->with('error', 'Failed to submit query.');

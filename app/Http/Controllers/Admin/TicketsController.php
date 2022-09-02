@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Tickets;
 use Illuminate\Http\Request;
+use App\Http\Requests\Admin\UpdateTicketReply;
 
 class TicketsController extends Controller
 {
@@ -96,9 +97,26 @@ class TicketsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateTicketReply $request, $id)
     {
-        //
+        try {
+            $data = $request->except(
+                [
+                    '_method',
+                    '_token'
+                ]
+            );
+
+            Tickets::where('id', $id)->update($data);
+
+            return redirect()
+                ->route('admin.tickets.index')
+                ->with('success', 'Faq has been updated successfully.');
+        } catch (\Exception $exception) {
+            return redirect()
+                ->back()
+                ->with('error', $exception->getMessage());
+        }
     }
 
     /**

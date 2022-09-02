@@ -38,6 +38,7 @@
                     <table class="table table-striped table-bordered table-hover" id="sample_1">
                         <thead>
                             <tr>
+                                <th>Ticket id#</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Email</th>
@@ -51,6 +52,8 @@
 
                             @foreach ($records as $key => $record)
                                 <tr class="odd gradeX">
+
+                                    <td> dt#{!! $record->id !!}</td>
                                     <td>{!! $record->fname !!}</td>
                                     <td>{!! $record->lname !!}</td>
                                     <td>{!! $record->email !!}</td>

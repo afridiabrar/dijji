@@ -27,6 +27,7 @@ class CreateTicketsTable extends Migration
             $table->integer('check2');
             $table->integer('check3');
             $table->text('message');
+            $table->text('reply');
             $table->boolean('is_read')->default(0);
             $table->timestamps();
         });
