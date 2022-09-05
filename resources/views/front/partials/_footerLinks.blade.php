@@ -16,7 +16,6 @@
 <!-- Slick Slider CDN -->
 
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Wow Js CDN -->
 <script src="{{ frontjs('wow.min.js') }}"></script>
@@ -135,8 +134,28 @@
         this.value = (Number(this.checked));
     });
 </script>
+<script>
+    $(document).ready(function() {
+
+        // YOUR CODE (NOT RELATED TO DIALOGFLOW MESSENGER)
+
+        window.addEventListener('dfMessengerLoaded', function(event) {
+            let $r1 = document.querySelector("df-messenger");
+            let $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+            let $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+
+            var sheet = new CSSStyleSheet;
+            sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: 450px }`);
+            $r2.shadowRoot.adoptedStyleSheets = [sheet];
+
+            // MORE OF YOUR DIALOGFLOW MESSENGER CODE
+        });
+    });
+</script>
 
 <df-messenger intent="WELCOME" chat-title="Diji-Bot" agent-id="9fad1eda-c9cb-4e34-a5bd-02aff88263ae" language-code="en"
     chat-icon="https://t3.ftcdn.net/jpg/03/22/38/32/360_F_322383277_xcXz1I9vOFtdk7plhsRQyjODj08iNSwB.jpg"></df-messenger>
 <!-- backtotop end-->
+
+
 @yield('js')

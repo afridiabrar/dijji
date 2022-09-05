@@ -257,8 +257,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="circle-img">
-                        <figure><img src="{{ frontimage('person4.png') }}" class="img-fluid"></figure>
+                        <figure><img src="{{ frontimage('circle2.png') }}" class="img-fluid"></figure>
                     </div>
+
                     <div class="testimonial_slider">
                         @foreach ($testimonials as $testimonial)
                             <div class="testi-slide">
@@ -284,6 +285,8 @@
         </div>
 
     </section>
+
+
     <!-- Testimonials Sec End Here -->
 
     <section class="landing_banner">
