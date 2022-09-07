@@ -3,6 +3,7 @@
 @section('content')
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ frontcss('about.css') }}">
+    <link rel="stylesheet" href="{{ frontcss('blog-detail.css') }}">
 
     <section class="universal_banner">
         <div class="container">

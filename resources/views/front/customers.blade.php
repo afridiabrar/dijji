@@ -124,7 +124,7 @@
             <div class="row">
                 <div class="col-md-5 tl_impact">
                     <div class="img_box wow animate__animated animate__fadeInRight">
-                        <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media_2) }}" class="img-fluid"></figure>
+                        <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media_4) }}" class="img-fluid"></figure>
                     </div>
                 </div>
                 <div class="col-md-7">

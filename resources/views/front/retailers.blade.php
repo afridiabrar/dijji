@@ -46,7 +46,7 @@
                 <h2>The Problem<span class="pnk">.</span> The Solution<span class="yellow">.</span></h2>
             </div>
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-md-5 left_problem">
                     {!! $cmsPage->content_2 !!}
 
                 </div>
@@ -55,7 +55,7 @@
                         <figure><img src="{{ asset('uploads/pages/' . $cmsPage->media_2) }}" class="img-fluid"></figure>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 right_problem">
                     {!! $cmsPage->content_3 !!}
 
                 </div>
