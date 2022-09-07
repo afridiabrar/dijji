@@ -133,18 +133,19 @@
                 @if ($faq->category == 1)
                     <div id="accordionOne">
                         <div class="card">
-                            <div class="card-header" id="headingOne">
+                            <div class="card-header" id="heading{{ $faq->id }}">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="false" aria-controls="collapseOne">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapse{{ $faq->id }}" aria-expanded="false"
+                                        aria-controls="collapse{{ $faq->id }}">
                                         <h5>{{ $faq->question }}</h5>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </button>
                                 </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
-                                data-parent="#accordionOne">
+                            <div id="collapse{{ $faq->id }}" class="collapse "
+                                aria-labelledby="heading{{ $faq->id }}" data-parent="#accordion{{ $faq->id }}">
                                 <div class="card-body">
                                     {!! $faq->answer !!}
                                 </div>
@@ -162,18 +163,19 @@
                 @foreach ($faqs as $faq)
                     @if ($faq->category == 2)
                         <div class="card">
-                            <div class="card-header" id="headingOne">
+                            <div class="card-header" id="heading{{ $faq->id }}">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="false" aria-controls="collapseOne">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapse{{ $faq->id }}" aria-expanded="false"
+                                        aria-controls="collapse{{ $faq->id }}">
                                         <h5>{{ $faq->question }}</h5>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </button>
                                 </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
-                                data-parent="#accordionOne">
+                            <div id="collapse{{ $faq->id }}" class="collapse "
+                                aria-labelledby="heading{{ $faq->id }}" data-parent="#accordion{{ $faq->id }}">
                                 <div class="card-body">
                                     {!! $faq->answer !!}
                                 </div>
@@ -189,18 +191,20 @@
                 @foreach ($faqs as $faq)
                     @if ($faq->category == 3)
                         <div class="card">
-                            <div class="card-header" id="headingOne">
+                            <div class="card-header" id="heading{{ $faq->id }}">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        data-target="#collapse{{ $faq->id }}" aria-expanded="false"
+                                        aria-controls="collapse{{ $faq->id }}">
                                         <h5>{{ $faq->question }}</h5>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </button>
                                 </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
-                                data-parent="#accordionOne">
+                            <div id="collapse{{ $faq->id }}" class="collapse "
+                                aria-labelledby="heading{{ $faq->id }}"
+                                data-parent="#accordion{{ $faq->id }}">
                                 <div class="card-body">
                                     {!! $faq->answer !!}
                                 </div>
@@ -216,18 +220,20 @@
                 @foreach ($faqs as $faq)
                     @if ($faq->category == 4)
                         <div class="card">
-                            <div class="card-header" id="headingOne">
+                            <div class="card-header" id="heading{{ $faq->id }}">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        data-target="#collapse{{ $faq->id }}" aria-expanded="false"
+                                        aria-controls="collapse{{ $faq->id }}">
                                         <h5>{{ $faq->question }}</h5>
                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                     </button>
                                 </h5>
                             </div>
 
-                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
-                                data-parent="#accordionOne">
+                            <div id="collapse{{ $faq->id }}" class="collapse "
+                                aria-labelledby="heading{{ $faq->id }}"
+                                data-parent="#accordion{{ $faq->id }}">
                                 <div class="card-body">
                                     {!! $faq->answer !!}
                                 </div>
