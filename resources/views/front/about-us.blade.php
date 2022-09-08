@@ -100,12 +100,12 @@
                                         </figure>
                                     </div>
                                     <div class="back_box">
-                                        {!! $team->content !!}
+                                        <p>{{ $team->content }}</p>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <h4>{{ $team->name }}</h4>
-                                    <h5>{{ $team->designation }}O</h5>
+                                    <h5>{{ $team->designation }}</h5>
                                     <a href="https://www.linkedin.com/in/victoria-smallman-4a8b2033/" class="linkedin_sec">
                                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                                     </a>

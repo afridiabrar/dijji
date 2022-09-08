@@ -39,12 +39,20 @@
 .blog_box .content_box h4 {
   margin-bottom: 15px;
   color: #0cecbf;
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .blog_box .content_box p {
   color: #00000085;
   font-family: "gotham-book";
   font-size: 13px;
   line-height: 23px;
+  display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .blog_box .content_box a.lnk {
   font-size: 20px;

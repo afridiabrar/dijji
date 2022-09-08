@@ -60,7 +60,7 @@
                         <div class="form-group">
                             <label for="content" class="col-md-2 control-label">Content</label>
                             <div class="col-md-8">
-                                <textarea name="content" class="form-control ckeditor" maxlength="65000">{{ old('content') }}</textarea>
+                                <textarea name="content" class="form-control " maxlength="65000">{{ old('content') }}</textarea>
                             </div>
                         </div>
 

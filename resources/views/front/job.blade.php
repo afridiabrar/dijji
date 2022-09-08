@@ -83,9 +83,9 @@
                                     <div class="col-md-5">
                                         <div class="text-center">
                                             <p class="job_b_para"> {{ $career->experience }}</p>
-                                            <div>
+                                            <div class="job_add_loc">
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                <p class="job_g_para d-inline"> {{ $career->location }}</p>
+                                                <p class="job_g_para "> {{ $career->location }}</p>
                                             </div>
                                         </div>
                                     </div>

@@ -65,7 +65,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Contents:</strong> </label>
                             <div class="col-md-8">
-                                <label class="">{!! $data->content !!}</label>
+                                <label class="">{{ $data->content }}</label>
                             </div>
                         </div>
                         <div class="form-group">

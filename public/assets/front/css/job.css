@@ -34,10 +34,25 @@ p.job_g_para {
 .job_content p {
     margin: 0;
     font-family: "Gotham Rounded", sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 p.job_para {
     font-family: "Gotham Rounded", sans-serif;
     font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.job_add_loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 3px;
 }
 .job_content {
     padding: 2rem 1rem;
