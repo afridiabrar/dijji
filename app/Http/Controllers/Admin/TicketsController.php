@@ -106,8 +106,9 @@ class TicketsController extends Controller
                     '_token'
                 ]
             );
+            Tickets::where('id', $id)->update($data);
 
-            $ticket  = Tickets::where('id', $id)->update($data);
+            $ticket  = Tickets::where('id', $id)->first();
             dispatch(new \App\Jobs\SendContactFormEmailJob($ticket));
             return redirect()
                 ->route('admin.tickets.index')
