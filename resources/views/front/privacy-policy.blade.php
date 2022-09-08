@@ -10,7 +10,7 @@
     <section class="universal_banner">
         <div class="container">
             <div class="heading_wrapper">
-                <h1>{{ $cmsPage->pagetitle }}</h1>
+                <h1>{{ $cmsPage->page_title }}</h1>
             </div>
         </div>
     </section>
@@ -19,7 +19,7 @@
     <!-- Privacy Sec Start Here -->
     <section class="privacy_policy">
         <div class="container">
-        {!! $cmsPage->content !!}
+            {!! $cmsPage->content !!}
 
         </div>
     </section>

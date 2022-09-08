@@ -14,7 +14,7 @@
                 <div class="col-md-6">
                     <div class="content_wrapper">
                         <div class="heading_wrapper">
-                            <h1>{{ $cmsPage->pagetitle }}</h1>
+                            <h1>{{ $cmsPage->page_title }}</h1>
                             <a href="{{ url('/') }}"><i class="fa fa-times" aria-hidden="true"></i></a>
                         </div>
                         <div class="wrapper">
@@ -36,37 +36,43 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="f-name" placeholder="First Name" class="form-control" required>
+                                        <input type="text" name="f-name" placeholder="First Name" class="form-control"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="l-name" placeholder="Last Name" class="form-control" required>
+                                        <input type="text" name="l-name" placeholder="Last Name" class="form-control"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                        <input type="email" name="email" placeholder="Email" class="form-control"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control" required>
+                                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" name="password" placeholder="Password" class="form-control" required>
+                                        <input type="password" name="password" placeholder="Password" class="form-control"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="company_name" placeholder="Company Name" class="form-control">
+                                        <input type="text" name="company_name" placeholder="Company Name"
+                                            class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="recaptcha">
-                                        <div class="g-recaptcha" data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7">
+                                        <div class="g-recaptcha" data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz">
                                         </div>
                                     </div>
                                 </div>

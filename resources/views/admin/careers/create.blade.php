@@ -52,14 +52,14 @@
                         <div class="form-group">
                             <label for="experience" class="col-md-2 control-label">Experience *</label>
                             <div class="col-md-4">
-                                <input type="text" id="experience" maxlength="190" name="experience"
+                                <input type="text" id="experience" maxlength="20" name="experience"
                                     value="{{ old('experience') }}" class="form-control" />
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="salary" class="col-md-2 control-label">Salary *</label>
                             <div class="col-md-4">
-                                <input type="text" id="salary" maxlength="190" name="salary"
+                                <input type="text" id="salary" maxlength="20" name="salary"
                                     value="{{ old('salary') }}" class="form-control" />
                             </div>
                         </div>

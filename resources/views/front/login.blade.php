@@ -15,7 +15,7 @@
                 <div class="col-md-6">
                     <div class="content_wrapper">
                         <div class="heading_wrapper">
-                            <h1>{{ $cmsPage->pagetitle }}</h1>
+                            <h1>{{ $cmsPage->page_title }}</h1>
                             <a href="{{ url('/') }}"><i class="fa fa-times" aria-hidden="true"></i></a>
                         </div>
                         <div class="wrapper">
@@ -75,7 +75,7 @@
                                             </div>
                                             <div class="recaptcha">
                                                 <div class="g-recaptcha"
-                                                    data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
+                                                    data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
 
                                             </div>
                                             <div class="button-group">
@@ -93,7 +93,7 @@
                                             <div class="text-center have_account">
                                                 Create an account / join the waiting list
                                                 <!-- Already have an account?
-                                                        <a href="#">Sign in</a> -->
+                                                                <a href="#">Sign in</a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@
                                             </div>
                                             <div class="recaptcha">
                                                 <div class="g-recaptcha"
-                                                    data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
+                                                    data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
 
                                             </div>
                                             <div class="button-group">
@@ -137,7 +137,8 @@
                                                 <input type="password" placeholder="Password" class="form-control">
                                             </div>
                                             <div class="recaptcha">
-                                                <div class="g-recaptcha" data-sitekey="6LcTc3IgAAAAAEU1FwmPFv5mVygK9mzj0jm3tVG7"></div>
+                                                <div class="g-recaptcha"
+                                                    data-sitekey="6LfO2sUhAAAAAE_A2-8px_sUF3aA_gUITq-aA9Kz"></div>
 
                                             </div>
                                             <div class="button-group">

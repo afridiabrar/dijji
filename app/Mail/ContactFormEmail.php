@@ -36,7 +36,7 @@ class ContactFormEmail extends Mailable
     public function build()
     {
         return $this->subject('Contact Form Query!')
-            ->view('emails.contactEmail')
+            ->view('emails.ticketEmail')
             ->with('data', $this->formData);
     }
 }

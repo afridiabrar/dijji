@@ -8,7 +8,7 @@
     <section class="universal_banner">
         <div class="container">
             <div class="heading_wrapper">
-                <h1>{{ $cmsPage->pagetitle }}</h1>
+                <h1>{{ $cmsPage->page_title }}</h1>
             </div>
         </div>
     </section>
@@ -75,8 +75,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                                    Launch demo modal
-                                                                                </button> -->
+                                                                                        Launch demo modal
+                                                                                    </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
