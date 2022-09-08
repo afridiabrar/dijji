@@ -47,7 +47,7 @@ class SendContactFormEmailJob implements ShouldQueue
         $siteSettings = \App\Models\SiteSetting::first();
 
         if (isset($siteSettings)) {
-            Mail::to($siteSettings->contact_email)->send(
+            Mail::to($this->contactFormData->email)->send(
                 new \App\Mail\ContactFormEmail($this->contactFormData)
             );
         }
