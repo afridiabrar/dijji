@@ -147,7 +147,7 @@
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10">
                                 <button class="btn black" id="cancel"
-                                    onclick="window.location.href = '{!! URL::route('admin.contact-queries.index') !!}'">
+                                    onclick="window.location.href = '{!! URL::route('admin.tickets.index') !!}'">
                                     < Back.. </button>
                             </div>
                         </div>

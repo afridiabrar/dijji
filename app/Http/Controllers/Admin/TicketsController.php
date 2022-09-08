@@ -107,8 +107,8 @@ class TicketsController extends Controller
                 ]
             );
 
-            Tickets::where('id', $id)->update($data);
-            dispatch(new \App\Jobs\SendContactFormEmailJob($request->all()));
+            $ticket  = Tickets::where('id', $id)->update($data);
+            dispatch(new \App\Jobs\SendContactFormEmailJob($ticket));
             return redirect()
                 ->route('admin.tickets.index')
                 ->with('success', 'Faq has been updated successfully.');
