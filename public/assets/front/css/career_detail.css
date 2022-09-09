@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: space-between;
 }
+section.career_detail_sec .career-detail h2 {
+    font-size: 30px;
+}
 .career_detail_sec .apply-btn .btn {
     border-radius: 0;
     background: #0cecbf;
@@ -32,6 +35,10 @@ section.career_detail_sec {
 .career_detail_sec .career-dollar p {
     margin-bottom: 0;
     width: 315px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .modal-header {
     border-bottom: 0;
