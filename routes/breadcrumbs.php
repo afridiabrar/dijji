@@ -541,7 +541,7 @@ Breadcrumbs::for('admin.apply_jobs.create', function ($breadcrumbs) {
 // _slide > Show
 Breadcrumbs::for('admin.apply_jobs.show', function ($breadcrumbs, $data) {
     $breadcrumbs->parent('admin.apply_jobs.index');
-    $breadcrumbs->push($data->fullname, route('admin.apply_jobs.show', $data->id));
+    $breadcrumbs->push($data->fname, route('admin.apply_jobs.show', $data->id));
 });
 
 // _slide > Edit
