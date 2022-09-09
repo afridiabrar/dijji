@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Full Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="control-label">{{ $record->fname }} {{ $record->lname }}</label>
+                                <label class="control-label">{{ $data->fname }} {{ $data->lname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
