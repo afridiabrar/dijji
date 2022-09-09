@@ -65,34 +65,37 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">First Name*</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                        <input type="hidden" name="job_id" value="{{ $career->id }}">
+
+                                        <input type="text" name="fname" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp" placeholder="Julia" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Last Name*</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                        <input type="text" name="lname" class="form-control" id="exampleInputEmail1"
                                             aria-describedby="emailHelp" placeholder="Julia" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group"><label for="exampleInputEmail1">Email*</label>
-                                        <input type="email" class="form-control" id="inputemail"
+                                        <input type="email" name="email" class="form-control" id="inputemail"
                                             aria-describedby="emailHelp" placeholder="you@example.com" required>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group"><label for="exampleInputEmail1">Phone Number</label><input
-                                            type="tel" class="form-control" id="inputnum" aria-describedby="emailHelp"
-                                            placeholder="Phone Number"></div>
-                                </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Mobile Number</label>
-                                        <input type="tel" class="form-control" id="inputmobile"
+                                        <input type="tel" name="phone" class="form-control" id="inputmobile"
                                             aria-describedby="emailHelp" placeholder="Mobile Number">
                                     </div>
+                                </div>
+                                {{-- <div class="col-md-6">
+                                    <div class="form-group"><label for="exampleInputEmail1">Phone Number</label><input
+                                            type="tel" name="phone" class="form-control" id="inputnum"
+                                            aria-describedby="emailHelp" placeholder="Phone Number"></div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -105,13 +108,13 @@
                                             <option>5</option>
                                         </select>
                                         <!-- <input type="text" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="123456789"> -->
+                                                aria-describedby="emailHelp" placeholder="123456789"> -->
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Your Message*</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type here"
+                                        <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3" placeholder="Type here"
                                             style="height: 60px;" required>
                                     </textarea>
                                     </div>
@@ -121,7 +124,7 @@
                                         <div class=" col-md-6 col-xs-6">
                                             <div class="avatar-edit">
                                                 <label for="imageUpload">Upload Your CV</label>
-                                                <input type="file" id="imageUpload" required>
+                                                <input type="file" name="media" id="imageUpload" required>
                                             </div>
                                         </div>
                                         <div class="contactus-form-btn col-md-6 col-xs-6 text-right">
@@ -131,41 +134,41 @@
                                 </div>
                             </div>
                             <!-- <div class="form-group mt-4">
-                                    <div class="row">
-                                        <div class="col-md-12 col-xs-12">
-                                            <input type="hidden" name="job_id" value="{{ $career->id }}">
-                                            <input type="text" class="form-control" id="inputPass" name="fullname"
-                                                placeholder="Full name" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group mt-4">
-                                    <div class="row">
-                                        <div class="col-md-12 col-xs-12">
-                                            <input type="email" class="form-control" id="inputemail" name="email"
-                                                placeholder="Email Address" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group mt-4">
-                                    <div class="row">
-                                        <div class="col-md-12 col-xs-12">
-                                            <input type="tel" class="form-control" id="inputPno" name="phone"
-                                                placeholder="Phone Number" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class=" col-md-6 col-xs-6">
-                                        <div class="avatar-edit">
-                                            <label for="imageUpload">Upload Your CV</label>
-                                            <input type="file" name="media" id="imageUpload">
-                                        </div>
-                                    </div>
-                                    <div class="contactus-form-btn col-md-6 col-xs-6 text-right">
-                                        <small>Max Size 5mb</small>
-                                    </div>
-                                </div> -->
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 col-xs-12">
+                                                                                    <input type="hidden" name="job_id" value="{{ $career->id }}">
+                                                                                    <input type="text" class="form-control" id="inputPass" name="fullname"
+                                                                                        placeholder="Full name" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mt-4">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 col-xs-12">
+                                                                                    <input type="email" class="form-control" id="inputemail" name="email"
+                                                                                        placeholder="Email Address" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="form-group mt-4">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12 col-xs-12">
+                                                                                    <input type="tel" class="form-control" id="inputPno" name="phone"
+                                                                                        placeholder="Phone Number" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row align-items-center">
+                                                                            <div class=" col-md-6 col-xs-6">
+                                                                                <div class="avatar-edit">
+                                                                                    <label for="imageUpload">Upload Your CV</label>
+                                                                                    <input type="file" name="media" id="imageUpload">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="contactus-form-btn col-md-6 col-xs-6 text-right">
+                                                                                <small>Max Size 5mb</small>
+                                                                            </div>
+                                                                        </div> -->
                             <div class="text-center mt-3 mb-3">
                                 <button class="btn w-100" type="submit">Apply</button>
                             </div>

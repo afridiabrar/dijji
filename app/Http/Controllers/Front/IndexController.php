@@ -24,7 +24,7 @@ class IndexController extends Controller
 
 
 
-  public function image_upload($file)
+    public function image_upload($file)
     {
         $extension = $file->getClientOriginalExtension(); // getting file extension
         $filename  = 'media-file-' . time() . '.' . $extension;
@@ -67,35 +67,37 @@ class IndexController extends Controller
         if ($cmsPage) {
 
 
-            $blog = Blogs::where(['id'=>$id,'status'=> 1])->first();
+            $blog = Blogs::where(['id' => $id, 'status' => 1])->first();
 
             return view('front.' . $cmsPage->page_name, compact('cmsPage', 'blog'));
         }
         return '404 Page Not Found ';
     }
 
-public function job_detail(Request $request, $id)
-{
-    $cmsPage = Page::where('slug', 'job-detail')->first();
-            $career = Careers::where(['id'=>$id,'status'=> 1])->first();
-        if ($cmsPage ) {
+    public function job_detail(Request $request, $id)
+    {
+        $cmsPage = Page::where('slug', 'job-detail')->first();
+        $career = Careers::where(['id' => $id, 'status' => 1])->first();
+        if ($cmsPage) {
 
 
             return view('front.' . $cmsPage->page_name, compact('cmsPage', 'career'));
         }
         return '404 Page Not Found ';
-}
+    }
 
     public function submit_apply_job(Request $request)
     {
         // dd($request->file('media'));
         $request->validate(
             [
-            'fullname' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'job_id' => 'required',
-            'media' => 'required|mimes:pdf,doc,docx|max:5000000',
+                'fname' => 'required',
+                'lname' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'job_id' => 'required',
+                'message' => 'required',
+                'media' => 'required|mimes:pdf,doc,docx|max:5000000',
             ]
         );
 
@@ -120,13 +122,13 @@ public function job_detail(Request $request, $id)
                 ->with('error', 'Failed to submit query.');
         }
     }
-  
+
     public function subscribe(Request $request)
     {
         $data = $request->validate(
             [
 
-            'email' => 'required|unique:newsletter_subscribers,email',
+                'email' => 'required|unique:newsletter_subscribers,email',
             ]
         );
         $data = $request->except(
@@ -148,15 +150,15 @@ public function job_detail(Request $request, $id)
     {
         $data = $request->validate(
             [
-            'fname'=> 'required',
-            'lname'=> 'required',
-            'email'=> 'required',
-            'phone'=> 'required',
-            'postcode'=> 'required',
-            'company_name'=> 'required',
-            'no_store'=> 'required',
-            'term_condition'=> 'required',
-            'message'=> 'required',
+                'fname' => 'required',
+                'lname' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'postcode' => 'required',
+                'company_name' => 'required',
+                'no_store' => 'required',
+                'term_condition' => 'required',
+                'message' => 'required',
             ]
         );
         $data = $request->except(
@@ -178,15 +180,15 @@ public function job_detail(Request $request, $id)
                 ->with('error', 'Failed to submit query.');
         }
     }
-     public function submit_query(Request $request)
+    public function submit_query(Request $request)
     {
         $data = $request->validate(
             [
-            'fname'=> 'required',
-            'lname'=> 'required',
-            'email'=> 'required',
-            'phone'=> 'required',
-            'message'=> 'required',
+                'fname' => 'required',
+                'lname' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'message' => 'required',
             ]
         );
         $data = $request->except(
@@ -199,7 +201,7 @@ public function job_detail(Request $request, $id)
 
         $req = ContactQuery::create($data);
         if ($req) {
-          
+
             return redirect()->back()
                 ->with('success', 'Query has been submit successfully.');
         } else {
