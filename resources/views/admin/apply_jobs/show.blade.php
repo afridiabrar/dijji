@@ -42,7 +42,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Full Name:</strong> </label>
                             <div class="col-md-8">
-                                <label class="control-label">{{ $data->fullname }}</label>
+                                <label class="control-label">{{ $record->fname }} {{ $record->lname }}</label>
                             </div>
                         </div>
                         <div class="form-group">
@@ -57,12 +57,12 @@
                                 <label class="control-label">{{ $data->phone }}</label>
                             </div>
                         </div>
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Message:</strong> </label>
                             <div class="col-md-8">
-                                <label class="control-label">{{ $data->msg }}</label>
+                                <label class="control-label">{{ $data->message }}</label>
                             </div>
-                        </div> --}}
+                        </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label"><strong>Resume:</strong> </label>
                             <div class="col-md-8">

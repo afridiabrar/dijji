@@ -65,7 +65,7 @@
                             @foreach ($records as $key => $record)
                                 <tr class="odd gradeX">
                                     <td><a href="{!! URL::route('admin.careers.show', $record->job_id) !!}">{{ $record->career->title }}</a></td>
-                                    <td>{!! $record->fullname !!}</td>
+                                    <td>{{ $record->fname }} {{ $record->lname }}</td>
                                     <td>{!! $record->email !!}</td>
                                     <td>{!! $record->phone !!}</td>
                                     <td class="center text-center">
