@@ -25,7 +25,10 @@
                         <h2>{{ $blog->title }}</h2>
 
                     </div>
-                    {!! $blog->content !!}
+                    <div class="d-flex">
+
+                        {!! $blog->content !!}
+                    </div>
                 </div>
 
             </div>
