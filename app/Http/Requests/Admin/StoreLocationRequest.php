@@ -24,7 +24,7 @@ class StoreLocationRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'        => 'required|unique:locations|max:190',
+            'name'        => 'required|unique:locations|max:30',
         ];
     }
 }

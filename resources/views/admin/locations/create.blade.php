@@ -38,7 +38,8 @@
                         <div class="form-group">
                             <label for="name" class="col-md-2 control-label">Name *</label>
                             <div class="col-md-8">
-                                <input type="text" name="name" value="{{ old('name') }}" class="form-control" />
+                                <input type="text" name="name" value="{{ old('name') }}" maxlength="30"
+                                    class="form-control" />
                             </div>
                         </div>
 

@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label for="name" class="col-md-2 control-label">Name *</label>
                             <div class="col-md-8">
-                                <input type="text" name="name" value="{{ old('name', $data->name) }}"
+                                <input type="text" name="name" maxlength="30" value="{{ old('name', $data->name) }}"
                                     class="form-control" />
                             </div>
                         </div>

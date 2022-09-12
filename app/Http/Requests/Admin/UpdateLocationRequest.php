@@ -25,7 +25,7 @@ class UpdateLocationRequest extends FormRequest
     {
         return [
             // 'media_file_id'     => 'required',
-            'name'        => 'required|max:190',
+            'name'        => 'required|max:30',
         ];
     }
 }
