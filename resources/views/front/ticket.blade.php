@@ -29,13 +29,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input required type="text" name="fname" pattern="[A-Za-z]" placeholder="First Name"
+                            <input required type="text" name="fname" pattern="[A-Za-z]{1,32}" placeholder="First Name"
                                 class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input required type="text" name="lname" pattern="[A-Za-z]" placeholder="Last Name"
+                            <input required type="text" name="lname" pattern="[A-Za-z]{1,32}" placeholder="Last Name"
                                 class="form-control">
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <textarea placeholder="Your message here" name="message" class="form-control"></textarea>
+                            <textarea required placeholder="Your message here" name="message" class="form-control"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -117,8 +117,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                                                                                        Launch demo modal
-                                                                                                                                    </button> -->
+                                                                                                                                                Launch demo modal
+                                                                                                                                            </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
