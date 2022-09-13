@@ -29,12 +29,14 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" name="fname" placeholder="First Name" class="form-control">
+                            <input type="text" name="fname" pattern="[A-Za-z]" placeholder="First Name"
+                                class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" name="lname" placeholder="Last Name" class="form-control">
+                            <input type="text" name="lname" pattern="[A-Za-z]" placeholder="Last Name"
+                                class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -113,8 +115,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                                                                    Launch demo modal
-                                                                                                                </button> -->
+                                                                                                                        Launch demo modal
+                                                                                                                    </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">

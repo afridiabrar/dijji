@@ -14,6 +14,10 @@ df-messenger {
 
 }
 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
