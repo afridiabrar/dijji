@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input required type="text" name="no_store" placeholder="Number Of Stores"
+                            <input required type="number" name="no_store" placeholder="Number Of Stores"
                                 class="form-control">
                         </div>
                     </div>
@@ -117,8 +117,8 @@
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                                                                                                                                                Launch demo modal
-                                                                                                                                            </button> -->
+                                                                                                                                                    Launch demo modal
+                                                                                                                                                </button> -->
 
     <div class="modal fade" id="contact_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
