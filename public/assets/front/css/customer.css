@@ -335,7 +335,7 @@
 }
 
 .benefit_sec .heading_wrapper~.row .col-md-4:nth-child(odd) {
-  /* margin-top: -300px; */
+  margin-top: -300px;
 }
 
 .benefit_sec .benefits_box {
@@ -383,7 +383,7 @@
 }
 
 section.calculator_sec~.benefit_sec .center-mobile {
-  margin-top: -50%;
+  margin-top: -55%;
 }
 
 @media(max-width:1366px) {

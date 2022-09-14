@@ -64,3 +64,14 @@ jQuery(document).ready(function ($) {
 //   }
 // }
 // Menu Active Js
+
+// for file upload button which is on the career detail page
+
+const actualBtn = document.getElementById('actual-btn');
+
+const fileChosen = document.getElementById('file-chosen');
+
+actualBtn.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
+})
+// for file upload button which is on the career detail page

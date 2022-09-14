@@ -112,6 +112,21 @@ p.aftj {
     color: #300c44;
     font-weight: 400;
 }
+
+  label.choosenfile {
+    background-color: #0cecbf;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-family: "Gotham Rounded", sans-serif;
+}
+  
+  #file-chosen{
+    margin-left: 0.3rem;
+    font-family: sans-serif;
+  }
 @media(min-width:1024px){
     .career_detail_modal .modal-dialog {
         max-width: 900px;
